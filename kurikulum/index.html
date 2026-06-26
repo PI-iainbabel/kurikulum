@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurikulum OBE-MBKM · Psikologi Islam</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            500: '#22c55e',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16',
+                        },
+                        psych: {
+                            bg: '#FAF8F5',
+                            dark: '#2D221E',
+                            plum: '#4A2840',
+                            coral: '#E76F51',
+                            lavender: '#8D7BFF',
+                            sage: '#6B9E7A',
+                            border: '#EADBC8',
+                        },
+                        glow: '#4F8FFF',
+                        gold: '#D4AF37',
+                        navy: {
+                            50: '#E8EDF8',
+                            100: '#C5D2F0',
+                            200: '#9DB5E8',
+                            300: '#6F95E0',
+                            400: '#4F7FD8',
+                            500: '#2A5CC4',
+                            600: '#1A3F8F',
+                            700: '#122B6A',
+                            800: '#0B1D45',
+                            900: '#060F28',
+                            950: '#030714',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .tab-content {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glass {
+            background: rgba(11, 29, 69, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(79, 143, 255, 0.15);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 80px rgba(79, 143, 255, 0.03);
+        }
+        .glass-strong {
+            background: rgba(11, 29, 69, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(79, 143, 255, 0.25);
+            box-shadow: 0 12px 56px rgba(0, 0, 0, 0.6), 0 0 100px rgba(79, 143, 255, 0.05);
+        }
+        .glow-text {
+            text-shadow: 0 0 30px rgba(79, 143, 255, 0.25), 0 0 80px rgba(79, 143, 255, 0.08);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1A3F8F, #2A5CC4);
+            border: 1px solid rgba(79, 143, 255, 0.3);
+            color: white;
+            font-weight: 700;
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            box-shadow: 0 8px 24px rgba(79, 143, 255, 0.15), 0 0 40px rgba(79, 143, 255, 0.04);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(79, 143, 255, 0.25), 0 0 60px rgba(79, 143, 255, 0.06);
+            border-color: rgba(79, 143, 255, 0.5);
+        }
+        .btn-primary-gold {
+            background: linear-gradient(135deg, #B8941E, #D4AF37);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #060F28;
+            font-weight: 700;
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-primary-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.2);
+        }
+
+        .stat-card {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .stat-card:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+
+        .card-cluster {
+            border-left: 4px solid #4F8FFF;
+            transition: all 0.3s ease;
+        }
+        .card-cluster:hover {
+            transform: translateX(6px);
+            box-shadow: 0 8px 24px rgba(79, 143, 255, 0.08);
+        }
+        .card-cluster.integration {
+            border-left-color: #D4AF37;
+        }
+        .card-cluster.behavioral {
+            border-left-color: #6B9E7A;
+        }
+
+        .pulse-glow {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(79, 143, 255, 0.05);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(79, 143, 255, 0.12);
+            }
+        }
+
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+        }
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 4px;
+        }
+
+        .matrix-cell {
+            transition: all 0.2s ease;
+        }
+        .matrix-cell:hover {
+            transform: scale(1.15);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- ====== MAIN CONTAINER ====== -->
+    <div class="flex flex-col lg:flex-row min-h-screen">
+
+        <!-- ====== SIDEBAR NAVIGATION ====== -->
+        <aside class="w-full lg:w-72 bg-gradient-to-b from-navy-900 to-navy-950 text-white flex flex-col justify-between shrink-0 shadow-xl border-r border-navy-700/40 z-20 relative overflow-hidden">
+            <!-- Background glow -->
+            <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-glow/5 blur-3xl pointer-events-none"></div>
+
+            <div>
+                <!-- Brand Profile dengan Logo -->
+                <div class="p-4 border-b border-navy-700/50 relative z-10">
+                    <div class="flex items-center gap-3">
+                        <div class="logo-placeholder">
+                            <img src="https://via.placeholder.com/40x40/0B1D45/FFFFFF?text=IAIN" alt="IAIN SAS Babel" class="w-full h-full object-contain">
+                        </div>
+                        <div>
+                            <h2 class="font-heading font-bold text-sm tracking-wide text-glow leading-tight">KURIKULUM OBE</h2>
+                            <p class="text-[10px] text-white/50 uppercase font-semibold tracking-widest mt-0.5">Psikologi Islam 2024</p>
+                        </div>
+                    </div>
+                    <div class="mt-2 bg-navy-800/50 p-2 rounded-lg border border-navy-700/50 text-[10px] text-white/60 leading-snug">
+                        <strong class="text-glow">IAIN SAS Babel</strong><br>Fakultas Dakwah dan Komunikasi Islam
+                    </div>
+                    <div class="mt-1.5 flex items-center gap-2">
+                        <div class="logo-placeholder w-6 h-6">
+                            <img src="https://via.placeholder.com/24x24/8D7BFF/FFFFFF?text=PI" alt="Prodi Psikologi Islam" class="w-full h-full object-contain">
+                        </div>
+                        <span class="text-[8px] text-white/40 font-medium">Prodi Psikologi Islam</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="p-4 space-y-1" id="sidebarNav">
+                    <button onclick="switchTab('dashboard')" id="btn-dashboard" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-glow/20 text-white shadow-lg shadow-glow/10 border border-glow/20">
+                        <span class="text-lg">📊</span> Beranda & Visi
+                    </button>
+                    <button onclick="switchTab('peo-pl')" id="btn-peo-pl" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
+                        <span class="text-lg">🎯</span> Profil Lulusan
+                    </button>
+                    <button onclick="switchTab('cpl')" id="btn-cpl" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
+                        <span class="text-lg">📜</span> CPL (1-16)
+                    </button>
+                    <button onclick="switchTab('bk')" id="btn-bk" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
+                        <span class="text-lg">📚</span> Bahan Kajian
+                    </button>
+                    <button onclick="switchTab('matakuliah')" id="btn-matakuliah" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
+                        <span class="text-lg">📖</span> Struktur & SKS
+                    </button>
+                    <button onclick="switchTab('matriks')" id="btn-matriks" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
+                        <span class="text-lg">🧮</span> Matriks CPL vs MK
+                    </button>
+                    <button onclick="switchTab('cpmk')" id="btn-cpmk" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
+                        <span class="text-lg">🔬</span> CPMK & RPS
+                    </button>
+                    <!-- ====== MENU DISTINGSI & LAB (BARU) ====== -->
+                    <button onclick="switchTab('distingsi')" id="btn-distingsi" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
+                        <span class="text-lg">🏛️</span> Distingsi & Lab
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Sidebar Footer with Psychosophia Lab (kecil) -->
+            <div class="p-3 border-t border-navy-700/50 bg-navy-900/60 text-center relative z-10">
+                <div class="flex items-center justify-center gap-2 text-[8px] text-white/30">
+                    <i class="fa-regular fa-circle-check text-glow/40"></i>
+                    <span>Psychosophia Behavioral Lab</span>
+                    <span class="text-white/20">·</span>
+                    <span class="text-white/20">Pengembang</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ====== MAIN CONTENT ====== -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+
+            <!-- Header bar -->
+            <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 py-3 flex flex-col sm:flex-row justify-between items-center gap-3 shadow-sm z-10 shrink-0">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl" id="headerEmoji">📊</span>
+                    <div>
+                        <h1 class="text-base md:text-lg font-bold text-slate-800 font-heading leading-tight" id="headerTitle">Beranda & Visi Misi Kurikulum</h1>
+                        <p class="text-[11px] md:text-xs text-slate-500" id="headerSubtitle">Dasar filosofis OBE Psikologi Islam 2024</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+                    <button onclick="window.print()" class="bg-navy-800 hover:bg-navy-900 text-white text-xs font-bold px-4 py-2 rounded-xl border border-navy-700 shadow-md flex items-center gap-2 transition-all">
+                        🖨️ Cetak / PDF
+                    </button>
+                    <div class="bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        PI-2024
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Scrollable Area -->
+            <div class="flex-1 overflow-y-auto p-4 md:p-8 space-y-8 custom-scrollbar" id="contentArea">
+
+                <!-- ========================================================== -->
+                <!-- TAB 1: BERANDA & VISI MISI -->
+                <!-- ========================================================== -->
+                <div id="tab-dashboard" class="tab-content space-y-8">
+
+                    <!-- Visi Saintifik Prodi -->
+                    <div class="glass-strong rounded-3xl p-6 md:p-8 text-white border border-glow/10 shadow-2xl shadow-navy-950/50 relative overflow-hidden pulse-glow">
+                        <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none transform translate-y-8 translate-x-8">
+                            <span class="text-[200px]">🕌</span>
+                        </div>
+                        <div class="relative z-10 space-y-3 max-w-4xl">
+                            <div class="flex items-center gap-3">
+                                <span class="bg-gold/20 text-gold font-bold px-3 py-1 rounded-full text-[10px] tracking-wider uppercase border border-gold/30">
+                                    <i class="fa-regular fa-star mr-1"></i> Visi Saintifik
+                                </span>
+                                <span class="text-[10px] text-white/30">Program Studi Psikologi Islam</span>
+                            </div>
+                            <h2 class="text-xl md:text-3xl font-bold font-heading leading-tight text-glow glow-text">
+                                Menyelenggarakan pendidikan sarjana psikologi untuk menghasilkan lulusan yang unggul, religius, dan profesional berdasarkan nilai-nilai Keislaman
+                            </h2>
+                            <p class="text-xs md:text-sm text-white/50 font-medium max-w-3xl leading-relaxed">
+                                Fakultas Dakwah dan Komunikasi Islam, Institut Agama Islam Negeri Syaikh Abdurrahman Siddik Bangka Belitung.
+                                Dirancang dengan prinsip Outcome-Based Education (OBE) dan Merdeka Belajar Kampus Merdeka (MBKM) — 144 SKS kelulusan.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-2">
+                                <span class="bg-navy-800/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-building mr-1"></i> IAIN SAS Babel</span>
+                                <span class="bg-navy-800/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-brain mr-1"></i> Psychosophia Lab</span>
+                                <span class="bg-navy-800/50 px-3 py-1 rounded-full text-[9px] text-gold border border-gold/20"><i class="fa-regular fa-certificate mr-1"></i> PI-2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stat Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div class="bg-white p-5 rounded-2xl border-2 border-emerald-100 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
+                            <div class="absolute top-0 left-0 h-full w-2 bg-emerald-600"></div>
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Total CPL</span>
+                                <span class="text-3xl font-black font-heading text-emerald-900 block mt-1">16</span>
+                                <span class="text-[11px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded block mt-1.5">4 Domain</span>
+                            </div>
+                            <span class="text-4xl filter drop-shadow">📜</span>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl border-2 border-blue-100 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
+                            <div class="absolute top-0 left-0 h-full w-2 bg-blue-600"></div>
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Mata Kuliah</span>
+                                <span class="text-3xl font-black font-heading text-blue-900 block mt-1">76</span>
+                                <span class="text-[11px] bg-blue-100 text-blue-800 font-bold px-1.5 py-0.5 rounded block mt-1.5">51 Wajib · 25 Pilihan</span>
+                            </div>
+                            <span class="text-4xl filter drop-shadow">📖</span>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl border-2 border-amber-100 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
+                            <div class="absolute top-0 left-0 h-full w-2 bg-amber-600"></div>
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Bobot Kelulusan</span>
+                                <span class="text-3xl font-black font-heading text-amber-900 block mt-1">144 <span class="text-xs font-medium text-slate-400">SKS</span></span>
+                                <span class="text-[11px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded block mt-1.5">Standar MBKM</span>
+                            </div>
+                            <span class="text-4xl filter drop-shadow">🎓</span>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl border-2 border-purple-100 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
+                            <div class="absolute top-0 left-0 h-full w-2 bg-purple-600"></div>
+                            <div>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Bahan Kajian</span>
+                                <span class="text-3xl font-black font-heading text-purple-900 block mt-1">18</span>
+                                <span class="text-[11px] bg-purple-100 text-purple-800 font-bold px-1.5 py-0.5 rounded block mt-1.5">Pokok Pembahasan</span>
+                            </div>
+                            <span class="text-4xl filter drop-shadow">🔬</span>
+                        </div>
+                    </div>
+
+                    <!-- Visi Misi & PEO Cards -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                        <!-- Visi Misi -->
+                        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-lg flex flex-col justify-between">
+                            <div class="bg-emerald-100/70 p-6 border-b border-emerald-200">
+                                <span class="text-xs font-bold tracking-widest text-emerald-800 uppercase">Arah Strategis</span>
+                                <h3 class="text-xl font-bold font-heading text-emerald-950 mt-1">Visi & Misi</h3>
+                            </div>
+                            <div class="p-6 md:p-8 space-y-6">
+                                <div class="bg-emerald-50/50 p-5 rounded-xl border-l-4 border-emerald-600 space-y-2 relative">
+                                    <span class="absolute top-2 right-4 text-emerald-200/50 text-4xl font-black font-heading">VISI</span>
+                                    <h4 class="font-bold text-emerald-900 text-xs uppercase tracking-wider">Visi 2038</h4>
+                                    <p class="text-slate-700 text-sm font-semibold leading-relaxed">
+                                        "Menjadi Program Studi Psikologi Islam yang Unggul, Religius, Intelektual, dan Profesional pada Tahun 2038 di Regional Sumatera."
+                                    </p>
+                                </div>
+                                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 relative">
+                                    <span class="absolute top-2 right-4 text-slate-200/60 text-4xl font-black font-heading">MISI</span>
+                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wider">Misi Akselerasi</h4>
+                                    <ol class="list-decimal list-inside space-y-2 text-xs text-slate-600 leading-relaxed">
+                                        <li>Membentuk lulusan yang mampu melakukan integrasi dan interkoneksi keilmuan psikologi dengan pemahaman kajian keislaman.</li>
+                                        <li>Menyelenggarakan pendidikan psikologi Islam yang fokus pada aspek psikologis dan religius dalam menganalisis gejala sosial.</li>
+                                        <li>Menyelenggarakan penelitian di bidang psikologi Islam berlandaskan konsep psikologi dan kajian keislaman.</li>
+                                        <li>Menyelenggarakan pengabdian kepada masyarakat di bidang psikologi Islam.</li>
+                                        <li>Menyelenggarakan kerja sama dengan instansi/lembaga di bidang psikologi Islam.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PEO -->
+                        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-lg flex flex-col justify-between">
+                            <div class="bg-amber-100/70 p-6 border-b border-amber-200">
+                                <span class="text-xs font-bold tracking-widest text-amber-800 uppercase">Tujuan Pendidikan</span>
+                                <h3 class="text-xl font-bold font-heading text-amber-950 mt-1">Program Educational Objectives</h3>
+                            </div>
+                            <div class="p-6 md:p-8 space-y-4">
+                                <div class="bg-amber-50/50 p-5 rounded-xl border border-amber-200 text-xs space-y-3 leading-relaxed">
+                                    <p class="text-slate-700 font-semibold text-xs leading-relaxed">
+                                        Lulusan Psikologi Islam mampu berkiprah optimal di masyarakat dalam 3-5 tahun setelah kelulusan dengan tujuan:
+                                    </p>
+                                    <div class="space-y-3 pt-2">
+                                        <div class="flex gap-3">
+                                            <span class="bg-amber-600 text-white font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">1</span>
+                                            <p class="text-slate-600 leading-relaxed"><strong class="text-amber-950 font-bold block">Integrasi Keilmuan:</strong> Mensinergikan psikologi modern dengan nilai-nilai Islam.</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <span class="bg-amber-600 text-white font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">2</span>
+                                            <p class="text-slate-600 leading-relaxed"><strong class="text-amber-950 font-bold block">Integritas Etik:</strong> Menjunjung Kode Etik Psikologi Indonesia dan etika kepribadian muslim.</p>
+                                        </div>
+                                        <div class="flex gap-3">
+                                            <span class="bg-amber-600 text-white font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">3</span>
+                                            <p class="text-slate-600 leading-relaxed"><strong class="text-amber-950 font-bold block">Responsibilitas Umat:</strong> Memberikan solusi psikoedukatif berorientasi kemaslahatan masyarakat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================================== -->
+                <!-- TAB 2: PROFIL LULUSAN -->
+                <!-- ========================================================== -->
+                <div id="tab-peo-pl" class="tab-content hidden space-y-6">
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-xs text-amber-900 font-medium shadow-inner">
+                        📌 Profil Lulusan (PL) dirumuskan berdasarkan dialektika SN-DIKTI, Asosiasi Penyelenggara Pendidikan Tinggi Psikologi Indonesia (AP2TPI), Konsorsium Keilmuan Psikologi Perguruan Tinggi Keagamaan Islam(K2P-PTKI), kebutuhan dunia kontemporer, dan modalitas lokal yang mengakar dengan pilar muatan Psikologi Islam integratif.
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- PL 1 -->
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+                            <span class="absolute top-4 right-4 text-3xl opacity-30">💼</span>
+                            <span class="bg-emerald-100 text-emerald-900 font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 1</span>
+                            <h3 class="text-lg font-bold text-slate-800 font-heading">Asisten Psikolog</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Membantu tugas psikolog profesional: skoring alat tes, administrasi tes dasar di bawah supervisi, merancang, melakukan, mengevaluasi, dan melaporkan asesmen (observasi, wawancara) berdasarkan prinsip psikodiagnostika sesuai Kode Etik Psikologi Indonesia.
+                            </p>
+                        </div>
+                        <!-- PL 2 -->
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+                            <span class="absolute top-4 right-4 text-3xl opacity-30">🧠</span>
+                            <span class="bg-blue-100 text-blue-900 font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 2</span>
+                            <h3 class="text-lg font-bold text-slate-800 font-heading">Konsultan Bidang Psikologi</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Memberikan solusi/rekomendasi berbasis riset di ranah non-klinis (sekolah, komunitas, UMKM, PIO). Mampu mengumpulkan & menganalisis data, menyusun laporan penelitian, serta merancang program intervensi sederhana/pelatihan yang sahih.
+                            </p>
+                        </div>
+                        <!-- PL 3 -->
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+                            <span class="absolute top-4 right-4 text-3xl opacity-30">🤝</span>
+                            <span class="bg-purple-100 text-purple-900 font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 3</span>
+                            <h3 class="text-lg font-bold text-slate-800 font-heading">Konselor / Penyuluh Psikologi</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed">
+                                Mampu merancang, melakukan, mengevaluasi, dan melaporkan program preventif/promotif (psikoedukasi, konseling sebaya, penyuluhan mental) berbasis integratif psikologi barat dan spiritual Islam untuk individu, keluarga, maupun komunitas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================================== -->
+                <!-- TAB 3: CPL 1-16 -->
+                <!-- ========================================================== -->
+                <div id="tab-cpl" class="tab-content hidden space-y-6">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div class="flex gap-2 overflow-x-auto pb-1 max-w-full">
+                            <button onclick="filterCPL('all')" class="cpl-filter-btn px-4 py-2 bg-navy-700 text-white rounded-xl text-xs font-semibold shadow-sm shrink-0">Semua Domain</button>
+                            <button onclick="filterCPL('Sikap')" class="cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0">Sikap</button>
+                            <button onclick="filterCPL('Pengetahuan')" class="cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0">Pengetahuan</button>
+                            <button onclick="filterCPL('Keterampilan Khusus')" class="cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0">Ket. Khusus</button>
+                            <button onclick="filterCPL('Keterampilan Umum')" class="cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0">Ket. Umum</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="cplGrid">
+                        <!-- JS injected -->
+                    </div>
+                </div>
+
+                <!-- ========================================================== -->
+                <!-- TAB 4: BAHAN KAJIAN (BK) -->
+                <!-- ========================================================== -->
+                <div id="tab-bk" class="tab-content hidden space-y-6">
+                    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-md space-y-4">
+                        <div class="border-b border-slate-100 pb-3">
+                            <h3 class="text-lg font-bold text-slate-800 font-heading">18 Bahan Kajian (BK) Psikologi Islam</h3>
+                            <p class="text-xs text-slate-500 leading-relaxed mt-1">
+                                Diturunkan dari deskripsi BK kurikulum psikologi nasional Indonesia terintegrasi dengan epistemologi keislaman moderat.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="bkContainer">
+                            <!-- JS injected -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================================== -->
+                <!-- TAB 5: STRUKTUR MATA KULIAH & STATISTIK -->
+                <!-- ========================================================== -->
+                <div id="tab-matakuliah" class="tab-content hidden space-y-6">
+
+                    <!-- Statistik Course Card -->
+                    <div class="glass-strong rounded-3xl p-6 text-white border border-glow/10 shadow-2xl shadow-navy-950/50 relative overflow-hidden">
+                        <div class="relative z-10 flex flex-col md:flex-row justify-between items-stretch md:items-center gap-6">
+                            <div class="space-y-2">
+                                <span class="bg-gold/20 text-gold font-black px-3 py-1 rounded-full text-[10px] tracking-wider uppercase border border-gold/30">OBE SIMULATION</span>
+                                <h3 class="text-xl md:text-2xl font-bold font-heading text-glow glow-text">Statistik Mata Kuliah</h3>
+                                <p class="text-xs text-white/50 max-w-xl leading-relaxed">
+                                    Kurikulum Psikologi Islam terdiri dari <strong class="text-glow">76 Mata Kuliah</strong> dengan total <strong class="text-gold">144 SKS</strong> kelulusan.
+                                </p>
+                            </div>
+
+                            <!-- Stat Cards -->
+                            <div class="grid grid-cols-3 gap-3 min-w-[280px]">
+                                <div class="bg-navy-800/50 backdrop-blur-md p-4 rounded-2xl border border-glow/10 text-center stat-card">
+                                    <span class="text-[9px] text-white/40 uppercase tracking-widest font-bold block">Total MK</span>
+                                    <span class="text-2xl font-black font-heading text-glow block">76</span>
+                                    <span class="text-[8px] text-white/30">Seluruh Mata Kuliah</span>
+                                </div>
+                                <div class="bg-navy-800/50 backdrop-blur-md p-4 rounded-2xl border border-emerald-500/20 text-center stat-card">
+                                    <span class="text-[9px] text-emerald-400 uppercase tracking-widest font-bold block">Wajib</span>
+                                    <span class="text-2xl font-black font-heading text-emerald-400 block">51</span>
+                                    <span class="text-[8px] text-white/30">136 SKS</span>
+                                </div>
+                                <div class="bg-navy-800/50 backdrop-blur-md p-4 rounded-2xl border border-gold/20 text-center stat-card">
+                                    <span class="text-[9px] text-gold uppercase tracking-widest font-bold block">Pilihan</span>
+                                    <span class="text-2xl font-black font-heading text-gold block">25</span>
+                                    <span class="text-[8px] text-white/30">8 SKS dipilih</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress bar -->
+                        <div class="relative z-10 mt-4">
+                            <div class="flex justify-between text-[10px] text-white/40 mb-1">
+                                <span>Komposisi Kurikulum</span>
+                                <span>51 Wajib · 25 Pilihan</span>
+                            </div>
+                            <div class="w-full bg-navy-900/50 rounded-full h-3 overflow-hidden border border-navy-700 flex">
+                                <div class="bg-emerald-500 h-full transition-all duration-500" style="width: 67%;"></div>
+                                <div class="bg-gold/60 h-full transition-all duration-500" style="width: 33%;"></div>
+                            </div>
+                            <div class="flex justify-between text-[8px] text-white/30 mt-1">
+                                <span>▸ Wajib (67%)</span>
+                                <span>▸ Pilihan (33%)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filter controls -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 w-full flex-1">
+                            <input type="text" id="mkSearchInput" onkeyup="filterMKTable()" placeholder="Cari mata kuliah..."
+                            class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700 shadow-inner">
+                            <select id="mkSemesterFilter" onchange="filterMKTable()"
+                            class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700 shadow-sm font-medium">
+                            <option value="">-- Semua Semester --</option>
+                            <option value="1">Semester 1</option>
+                            <option value="2">Semester 2</option>
+                            <option value="3">Semester 3</option>
+                            <option value="4">Semester 4</option>
+                            <option value="5">Semester 5</option>
+                            <option value="6">Semester 6</option>
+                            <option value="7">Semester 7</option>
+                            <option value="8">Semester 8</option>
+                        </select>
+                        <select id="mkJenisFilter" onchange="filterMKTable()"
+                        class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700 shadow-sm font-medium">
+                        <option value="">-- Semua Jenis --</option>
+                        <option value="Wajib">Wajib</option>
+                        <option value="Pilihan">Pilihan / MBKM</option>
+                    </select>
+                    <select id="mkCPLFilter" onchange="filterMKTable()"
+                    class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700 shadow-sm font-medium">
+                    <option value="">-- Map CPL --</option>
+                    <script>
+                        for(let i=1; i<=16; i++) {
+                            document.write(`<option value="CPL ${i}">CPL ${i}</option>`);
+                        }
+                    </script>
+                </select>
+            </div>
+        </div>
+
+        <!-- Semester Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="semesterStatsGrid">
+            <!-- JS populated -->
+        </div>
+
+        <!-- Master Table -->
+        <div class="overflow-x-auto border border-slate-200 rounded-xl shadow-md bg-white">
+            <table class="w-full text-left border-collapse text-xs shadow-inner" id="mkTable">
+                <thead>
+                    <tr class="bg-slate-100 text-slate-700 font-heading font-semibold border-b border-slate-200">
+                        <th class="p-3 w-16 text-center bg-slate-200/50 font-bold text-slate-800">Status</th>
+                        <th class="p-3">Nama Mata Kuliah</th>
+                        <th class="p-3 text-center w-24">Semester</th>
+                        <th class="p-3 text-center w-20">SKS</th>
+                        <th class="p-3 text-center w-28">Jenis</th>
+                        <th class="p-3">Distribusi CPL</th>
+                        <th class="p-3 text-center bg-emerald-50 text-emerald-950 w-28">Jumlah CPL</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 bg-white text-slate-700" id="mkTableBody">
+                    <!-- JS populated -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- TAB 6: MATRIKS CPL VS MK -->
+    <!-- ========================================================== -->
+    <div id="tab-matriks" class="tab-content hidden space-y-6">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md space-y-3">
+            <h3 class="text-base font-bold text-slate-800 font-heading">Matriks Pemetaan Kompetensi (Kurikulum Map)</h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+                Peta keterkaitan semua mata kuliah terhadap 16 CPL. Arahkan kursor ke sel <span class="text-emerald-700 font-bold">●</span> untuk melihat kecocokan. Klik nama mata kuliah untuk melihat CPMK.
+            </p>
+        </div>
+
+        <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white shadow-md custom-scrollbar">
+            <table class="text-[10px] w-full text-center border-collapse" id="matrixTable">
+                <thead>
+                    <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-300">
+                        <th class="p-3 text-left w-64 border-r border-slate-200 min-w-[240px]">Mata Kuliah</th>
+                        <script>
+                            for(let i=1; i<=16; i++) {
+                                document.write(`<th class="p-2 border-r border-slate-200 bg-navy-50 font-bold text-navy-800">CPL ${i}</th>`);
+                            }
+                        </script>
+                        <th class="p-2 bg-slate-200/50 font-bold text-slate-800">SKS</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 bg-white" id="matrixTableBody">
+                    <!-- JS populated -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- TAB 7: CPMK & RENCANA RPS -->
+    <!-- ========================================================== -->
+    <div id="tab-cpmk" class="tab-content hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- Left: Pilih Mata Kuliah -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md space-y-4 h-[650px] flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-slate-800 font-heading text-sm mb-3">📍 Pilih Mata Kuliah:</h3>
+                    <input type="text" id="cpmkMkSearch" onkeyup="filterCpmkMkList()" placeholder="Cari mata kuliah..."
+                    class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-4 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700">
+                    <div class="overflow-y-auto space-y-1 h-[420px] custom-scrollbar" id="cpmkMkList">
+                        <!-- JS populated -->
+                    </div>
+                </div>
+                <div class="bg-amber-50 text-amber-900 text-[10px] p-3 rounded-xl border border-amber-200 leading-relaxed font-semibold">
+                    💡 CPMK adalah target terukur turunan dari CPL yang dibebankan di dalam RPS.
+                </div>
+            </div>
+
+            <!-- Right: Detail RPS -->
+            <div class="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden" id="cpmkDetailsArea">
+                <div class="bg-navy-50/70 p-6 border-b border-navy-200">
+                    <span class="text-xs font-bold tracking-widest text-navy-700 uppercase" id="cpmkDetailSub">RPS Detail</span>
+                    <h2 class="text-lg md:text-xl font-bold font-heading text-navy-900 mt-1" id="cpmkDetailTitle">Pilih Mata Kuliah</h2>
+                </div>
+                <div class="p-6 md:p-8 space-y-6">
+                    <!-- Informasi Mata Kuliah -->
+                    <div id="courseInfoContainer" class="space-y-4">
+                        <!-- Diisi oleh JS dengan deskripsi dari dokumen -->
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs">
+                            <span class="font-bold text-slate-800 block mb-1">CPL Terkait:</span>
+                            <p class="text-slate-600 font-medium" id="cpmkDetailCpl">-</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs">
+                            <span class="font-bold text-slate-800 block mb-1">Bobot SKS:</span>
+                            <p class="text-slate-600 font-medium" id="cpmkDetailSks">-</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm border-b border-slate-100 pb-2">🎯 CPMK</h4>
+                        <div class="space-y-3" id="cpmkDetailCpmkList">
+                            <!-- JS injected -->
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 p-3 rounded-xl text-xs text-blue-800">
+                            <i class="fa-regular fa-info-circle mr-1"></i>
+                            CPMK ditentukan oleh dosen pengampu mata kuliah sesuai dengan capaian pembelajaran yang ingin dicapai.
+                            <a href="https://drive.google.com/drive/folders/1dxyETq0PFpXgkZQ75Y41VYSXOw3jw5q-" target="_blank" class="text-blue-600 font-semibold hover:underline block mt-1">
+                                📁 Template RPS (Kemenristekdikti)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-slate-800 text-sm border-b border-slate-100 pb-2">📅 Sub-CPMK Mingguan (Contoh)</h4>
+                        <div class="overflow-x-auto rounded-lg border border-slate-200 shadow-sm">
+                            <table class="w-full text-left text-[11px] border-collapse bg-slate-50">
+                                <thead>
+                                    <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                                        <th class="p-3 text-center w-20">Minggu</th>
+                                        <th class="p-3">Kemampuan Akhir (Sub-CPMK)</th>
+                                        <th class="p-3 text-center">Evaluasi</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 bg-white" id="cpmkDetailSubCpmkTable">
+                                    <!-- JS populated -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- TAB 8: DISTINGSI PRODI & PSYCHOSOPHIA LAB (BARU) -->
+    <!-- ========================================================== -->
+    <div id="tab-distingsi" class="tab-content hidden space-y-6">
+        <!-- Header -->
+        <div class="glass-strong rounded-3xl p-6 md:p-8 text-white border border-glow/10 shadow-2xl shadow-navy-950/50 relative overflow-hidden">
+            <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none transform translate-y-8 translate-x-8">
+                <span class="text-[200px]">🧠</span>
+            </div>
+            <div class="relative z-10 space-y-3 max-w-4xl">
+                <span class="bg-gold/20 text-gold font-bold px-3 py-1 rounded-full text-[10px] tracking-wider uppercase border border-gold/30">KEKHASAN PROGRAM STUDI</span>
+                <h2 class="text-xl md:text-3xl font-bold font-heading leading-tight text-glow glow-text">Distingsi & Laboratorium Riset</h2>
+                <p class="text-xs md:text-sm text-white/60 font-medium max-w-2xl leading-relaxed">
+                    Program Studi Psikologi Islam memiliki kekhasan dalam integrasi keilmuan psikologi dengan nilai-nilai keislaman, serta didukung oleh laboratorium riset digital Psychosophia Behavioral Lab.
+                </p>
+            </div>
+        </div>
+
+        <!-- Kelompok Mata Kuliah Integrasi Keislaman -->
+        <div class="space-y-4">
+            <h3 class="text-lg font-bold text-slate-800 font-heading flex items-center gap-2">
+                <span class="text-2xl">🕌</span> Kelompok Mata Kuliah Integrasi Keislaman
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed">
+                Mata kuliah berikut merupakan ciri khas Program Studi Psikologi Islam yang mengintegrasikan psikologi modern dengan nilai-nilai, ajaran, dan epistemologi Islam.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Psikologi Islam -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">📖</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Psikologi Islam</h4>
+                            <span class="text-[10px] text-amber-600 font-semibold">3 SKS · Semester 4</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Paradigma integrasi keilmuan psikologi dengan nilai-nilai spiritual dan kajian keislaman moderat, termasuk epistemologi nafsani dan tazkiyatun nafs.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
+                    </div>Profil target lulusan berkarakter Islami
+                </div>
+
+                <!-- Kajian Psikologis Fiqh -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">📜</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Kajian Psikologis Fiqh</h4>
+                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 6</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Mengkaji dimensi psikologis dalam hukum Islam (fiqh), termasuk aspek mental, emosi, dan perilaku dalam konteks ibadah, muamalah, dan akhlak.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
+                    </div>
+                </div>
+
+                <!-- Psikologi Ulayat -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">🏛️</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Psikologi Ulayat</h4>
+                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 4</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Pemahaman psikologis tentang konsep tanah ulayat, kearifan lokal, dan hubungan manusia dengan alam dalam perspektif masyarakat adat dan budaya lokal.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 5, 6, 9</span>
+                    </div>
+                </div>
+
+                <!-- Dasar Pemikiran Psikologi Islam -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">🧠</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Dasar Pemikiran Psikologi Islam</h4>
+                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 2</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Pengantar epistemologi dan sejarah pemikiran psikologi Islam klasik, termasuk kajian tentang nafs, ruh, qalb, dan konsep-konsep psikospiritual dalam Islam.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
+                    </div>
+                </div>
+
+                <!-- Kajian Psikologis Qur'ani -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">🔮</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Kajian Psikologis Qur'ani</h4>
+                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 5</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Analisis tematik ayat-ayat Al-Qur'an yang berkaitan dengan jiwa, perilaku, kesehatan mental, dan proses psikologis manusia.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
+                    </div>
+                </div>
+
+                <!-- Psikologi Tasawuf -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">☪️</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Psikologi Tasawuf</h4>
+                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 6</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Mengkaji dimensi psikologis dalam tasawuf, termasuk konsep maqam, hal, tazkiyatun nafs, dan implikasinya terhadap kesehatan mental dan pengembangan diri.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
+                    </div>
+                </div>
+
+                <!-- Psikologi Pesantren -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">🕌</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Psikologi Pesantren</h4>
+                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 4</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Studi psikologis tentang kehidupan pesantren, dinamika santri, pola pengasuhan, dan pendidikan karakter dalam lingkungan pondok pesantren.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 5, 7, 9</span>
+                    </div>
+                </div>
+
+                <!-- Psikologi Agama -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">🕊️</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Psikologi Agama</h4>
+                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 3</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Mempelajari hubungan antara agama, spiritualitas, dan perilaku manusia, termasuk dimensi psikologis dari pengalaman religius dan keberagamaan.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 5, 6, 9</span>
+                    </div>
+                </div>
+
+                <!-- Wawasan Ilmu Perilaku (Behavioral Science) -->
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster behavioral">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-2xl">⚡</span>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Wawasan Ilmu Perilaku</h4>
+                            <span class="text-[10px] text-sage-600 font-semibold">2 SKS · Semester 6</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed">Pengantar ilmu perilaku (behavioral science) yang mengintegrasikan psikologi kognitif dan sosial dengan pengambilan keputusan dalam berbagai konteks kehidupan.</p>
+                    <div class="mt-2 flex gap-2">
+                        <span class="text-[8px] bg-sage/10 text-sage px-2 py-0.5 rounded-full border border-sage/20">CPL 6, 9, 16</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Psychosophia Behavioral Lab -->
+        <div class="bg-gradient-to-br from-navy-900 to-navy-800 rounded-3xl p-6 md:p-8 border border-glow/10 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 text-8xl opacity-5"><i class="fa-regular fa-microchip"></i></div>
+            <div class="relative z-10">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-glow-400 to-navy-600 flex items-center justify-center text-2xl shadow-lg shadow-glow/20">
+                        <i class="fa-regular fa-microscope text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold font-heading text-glow glow-text">Psychosophia Behavioral Lab</h3>
+                        <p class="text-xs text-white/50">Laboratorium Riset Digital · Program Studi Psikologi Islam</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-3">
+                        <p class="text-sm text-white/70 leading-relaxed">
+                            <strong class="text-glow">Psychosophia Behavioral Lab</strong> adalah laboratorium riset digital terintegrasi yang berfokus pada pengembangan intervensi perilaku berbasis data dan kajian psikologi kontemporer dengan pendekatan multidisiplin.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-brain mr-1"></i> Riset Perilaku</span>
+                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-chart-line mr-1"></i> Analisis Data</span>
+                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-microchip mr-1"></i> Lab Digital</span>
+                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-book-open mr-1"></i> Kajian Islam</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-900/50 rounded-2xl p-5 border border-glow/10 space-y-3">
+                        <h4 class="font-bold text-sm text-gold">🔄 Bidang Riset Unggulan</h4>
+                        <ul class="space-y-2 text-xs text-white/60 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-glow mt-0.5">▸</span>
+                                <span><strong class="text-white/80">Integritas Akademik & Moral Disengagement</strong> — Studi tentang pelepasan moral dalam konteks akademik digital</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-glow mt-0.5">▸</span>
+                                <span><strong class="text-white/80">Psikologi Perilaku Ekonomi Islam</strong> — Riset tentang pengambilan keputusan ekonomi berbasis nilai-nilai Islam</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-glow mt-0.5">▸</span>
+                                <span><strong class="text-white/80">Intervensi Psikososial Digital</strong> — Pengembangan alat ukur dan intervensi berbasis teknologi</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-glow mt-0.5">▸</span>
+                                <span><strong class="text-white/80">Integrasi Sains & Spiritualitas</strong> — Kajian epistemologi psikologi Islam dan pengembangan model intervensi</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-glow/10 flex flex-wrap justify-between items-center gap-3">
+                    <span class="text-[9px] text-white/30 font-mono">Psychosophia Behavioral Lab v2.0 · IAIN SAS Babel</span>
+                    <span class="text-[9px] text-gold/50 flex items-center gap-1">
+                        <i class="fa-regular fa-circle-check"></i> Terintegrasi dengan Kurikulum OBE
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-gradient-to-r from-amber-50/50 to-amber-100/30 border border-amber-200/50 rounded-2xl p-5 flex items-center justify-between flex-wrap gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl">📋</span>
+                <div>
+                    <p class="text-sm font-bold text-amber-900">Eksplorasi Kurikulum Lebih Lanjut</p>
+                    <p class="text-xs text-amber-700/70">Gunakan menu navigasi untuk melihat matriks CPL, CPMK, dan detail RPS</p>
+                </div>
+            </div>
+            <button onclick="switchTab('matakuliah')" class="btn-primary-gold text-navy-950 font-bold text-xs px-5 py-2.5 rounded-xl flex items-center gap-2">
+                Lihat Struktur MK <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </button>
+        </div>
+    </div>
+
+</div>
+</main>
+</div>
+
+<!-- ====== TOAST NOTIFICATION ====== -->
+<div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-10 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-navy-900 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-lg border border-glow/20 flex items-center gap-2 backdrop-blur-sm">
+        <span id="toastIcon">💡</span>
+        <span id="toastMessage">Sistem siap.</span>
+    </div>
+</div>
+
+<!-- ====== SCRIPTS ====== -->
+<script>
+    // ====== DATASET CPL LENGKAP (1-16) ======
+    const cplDataset = [
+        { kode: "CPL 1", domain: "Sikap", level: "A2", deskripsi: "Bertakwa kepada Tuhan Yang Maha Esa dan menunjukkan sikap religius dalam menjalankan tugas berdasarkan pemahaman akidah akhlak." },
+        { kode: "CPL 2", domain: "Sikap", level: "A3", deskripsi: "Menjunjung tinggi nilai kemanusiaan, integritas moral, dan etika profesi psikologi berdasarkan Kode Etik Psikologi Indonesia dan moralitas keislaman." },
+        { kode: "CPL 3", domain: "Sikap", level: "A2", deskripsi: "Menunjukkan motivasi sebagai pembelajar seumur hidup (lifelong learner) yang adaptif terhadap dinamika perkembangan keilmuan kontemporer." },
+        { kode: "CPL 4", domain: "Sikap", level: "A3", deskripsi: "Menunjukkan sikap bertanggung jawab secara penuh atas pekerjaan di bidang keahliannya secara mandiri, jujur, transparan, dan beretika." },
+        { kode: "CPL 5", domain: "Sikap", level: "A3", deskripsi: "Menghargai keanekaragaman budaya, pandangan, agama, dan kepercayaan, serta mampu beradaptasi dalam konteks lintas budaya dan integrasi sosial." },
+        { kode: "CPL 6", domain: "Pengetahuan", level: "K4", deskripsi: "Menguasai konsep dasar dan teori-teori psikologi secara mendalam (behavioristik, kognitif, humanistik, psikoanalisis) untuk menganalisis perilaku manusia." },
+        { kode: "CPL 7", domain: "Pengetahuan", level: "K4", deskripsi: "Menguasai prinsip-prinsip dasar dan metodologi asesmen psikologi (observasi, wawancara, administrasi tes psikologi) di bawah supervisi psikolog." },
+        { kode: "CPL 8", domain: "Pengetahuan", level: "K4", deskripsi: "Menguasai dasar konstruksi alat ukur psikologi, psikometri dasar, dan penerapan analisis statistik sosial untuk pengolahan data penelitian." },
+        { kode: "CPL 9", domain: "Pengetahuan", level: "K3", deskripsi: "Menguasai dasar-dasar komunikasi antar-pribadi, komunikasi publik, dan dinamika kelompok untuk pelaksanaan intervensi psikoedukasi masyarakat." },
+        { kode: "CPL 10", domain: "Pengetahuan", level: "K4", deskripsi: "Menguasai paradigma integrasi dan interkoneksi keilmuan psikologi dengan nilai-nilai spiritual serta kajian keislaman moderat." },
+        { kode: "CPL 11", domain: "Keterampilan Khusus", level: "P4", deskripsi: "Mampu merancang instrumen observasi, melaksanakan panduan wawancara mendalam, dan mengadministrasikan tes psikologi dasar sesuai kode etik." },
+        { kode: "CPL 12", domain: "Keterampilan Khusus", level: "P4", deskripsi: "Mampu menyusun rancangan penelitian ilmiah kuantitatif atau kualitatif dasar di bidang psikologi umum dan psikologi Islam." },
+        { kode: "CPL 13", domain: "Keterampilan Khusus", level: "P3", deskripsi: "Mampu merancang dan mengevaluasi program psikoedukasi, pelatihan pengembangan diri sederhana, konseling teman sebaya, atau intervensi non-klinis." },
+        { kode: "CPL 14", domain: "Keterampilan Umum", level: "P3", deskripsi: "Mampu menyampaikan ide, hasil kajian ilmiah, atau gagasan akademik secara lisan maupun tertulis dengan baik dan etis." },
+        { kode: "CPL 15", domain: "Keterampilan Umum", level: "P3", deskripsi: "Mampu berkolaborasi secara produktif dalam tim lintas disiplin, menghargai dinamika kelompok, dan mengemban kepemimpinan kolektif." },
+        { kode: "CPL 16", domain: "Keterampilan Umum", level: "P4", deskripsi: "Mampu menerapkan pemikiran logis, kritis, sistematis, dan inovatif dalam memecahkan problematika psikologis masyarakat sekitar." }
+    ];
+
+    // ====== DATASET 18 BAHAN KAJIAN ======
+    const bkDataset = [
+        { kode: "BK 1", nama: "Pancasila dan Kewarganegaraan",
+        deskripsi: "Landasan kebangsaan, konstitusi, bela negara, patriotisme, dan pengembangan kepribadian luhur warga negara.",
+        cpls: ["CPL 4", "CPL 5", "CPL 14"] },
+        { kode: "BK 2", nama: "Bahasa dan Literasi Ilmiah",
+        deskripsi: "Keterampilan akademik berbahasa Indonesia, Inggris, dan Arab guna penulisan publikasi ilmiah dan komunikasi global.",
+        cpls: ["CPL 14"] },
+        { kode: "BK 3", nama: "Studi Teologi dan Moderasi Beragama",
+        deskripsi: "Pengenalan dasar Al-Qur'an, Hadis tematik, pemahaman hukum fiqh, kemajemukan, dan sikap moderat bernegara.",
+        cpls: ["CPL 1", "CPL 5", "CPL 10"] },
+        { kode: "BK 4", nama: "Filsafat dan Epistemologi Keilmuan",
+        deskripsi: "Filsafat umum, filsafat ilmu, penalaran logis, dan berpikir kritis saintifik untuk pengembangan ilmu pengetahuan.",
+        cpls: ["CPL 16"] },
+        { kode: "BK 5", nama: "Dasar-Dasar Ilmu Psikologi",
+        deskripsi: "Pengantar ilmu psikologi, sejarah aliran-aliran psikologi dunia, proses mental, serta mekanisme perilaku dasar.",
+        cpls: ["CPL 6"] },
+        { kode: "BK 6", nama: "Integrasi Sains dan Psikologi Islam",
+        deskripsi: "Dasar epistemologi integrasi keilmuan, sejarah pemikiran psikologi Islam klasik, dan kajian spiritualitas nafsani.",
+        cpls: ["CPL 1", "CPL 10", "CPL 13"] },
+        { kode: "BK 7", nama: "Biopsikologi dan Neurofisiologi",
+        deskripsi: "Sistem saraf, kerja otak, hormon, genetika, dan pengaruh neurofisiologis terhadap perilaku serta mental manusia.",
+        cpls: ["CPL 6", "CPL 16"] },
+        { kode: "BK 8", nama: "Psikologi Perkembangan Sepanjang Hayat",
+        deskripsi: "Aspek tumbuh kembang individu secara fisik, kognitif, emosional dari masa prenatal hingga lanjut usia.",
+        cpls: ["CPL 6", "CPL 13"] },
+        { kode: "BK 9", nama: "Psikologi Sosial, Budaya, dan Komunitas",
+        deskripsi: "Interaksi sosial, pengaruh kelompok, keragaman antropologis, kebudayaan lokal, dan pemberdayaan masyarakat.",
+        cpls: ["CPL 5", "CPL 6", "CPL 15"] },
+        { kode: "BK 10", nama: "Kepribadian dan Dinamika Karakter Manusia",
+        deskripsi: "Teori-teori kepribadian klasik (psikoanalisis, behavioristik, humanistik) dan pengembangan kepribadian muslim.",
+        cpls: ["CPL 6"] },
+        { kode: "BK 11", nama: "Kesehatan Mental dan Psikopatologi",
+        deskripsi: "Definisi mental sehat, gangguan kejiwaan/perilaku abnormal, klasifikasi diagnosa (PPDGJ/DSM), dan preventif mental.",
+        cpls: ["CPL 5", "CPL 6", "CPL 13"] },
+        { kode: "BK 12", nama: "Metodologi Penelitian Psikologi",
+        deskripsi: "Kaidah, etika, dan rancangan penelitian ilmiah kuantitatif eksplanatif serta kualitatif deskriptif fenomenologis.",
+        cpls: ["CPL 12", "CPL 16"] },
+        { kode: "BK 13", nama: "Statistika Sosial dan Penelitian",
+        deskripsi: "Prinsip statistika deskriptif, induktif/inferensial, pengujian hipotesis, dan komputasi data penelitian sosial.",
+        cpls: ["CPL 8", "CPL 12"] },
+        { kode: "BK 14", nama: "Psikometri dan Pengukuran Alat Ukur",
+        deskripsi: "Teori tes klasik/modern, validitas, reliabilitas, analisis aitem, dan dasar konstruksi skala psikologi mandiri.",
+        cpls: ["CPL 8", "CPL 12"] },
+        { kode: "BK 15", nama: "Asesmen Psikologi & Psikodiagnostika Dasar",
+        deskripsi: "Prinsip wawancara mendalam, rancangan lembar observasi, administrasi, dan skoring tes psikologi kognitif/proyektif.",
+        cpls: ["CPL 7", "CPL 11"] },
+        { kode: "BK 16", nama: "Konseling, Penyuluhan, dan Psikoedukasi",
+        deskripsi: "Keterampilan dasar komunikasi konseling, penyusunan rancangan psikoedukasi masyarakat, dan dinamika kelompok.",
+        cpls: ["CPL 9", "CPL 13", "CPL 15"] },
+        { kode: "BK 17", nama: "Psikoterapi, Konseling & Intervensi Islam",
+        deskripsi: "Terapi spiritual berbasis Islam (dzikir, ruqyah syari'ah, tazkiyatun nafs) untuk penanganan problematika kejiwaan.",
+        cpls: ["CPL 1", "CPL 9", "CPL 13"] },
+        { kode: "BK 18", nama: "Aplikasi Psikologi Terapan (Klinis, Pendidikan, PIO)",
+        deskripsi: "Kontekstualisasi keilmuan psikologi pada ranah instansi pendidikan, industri organisasi kerja, klinis dan forensik.",
+        cpls: ["CPL 6", "CPL 13"] }
+    ];
+
+    // ====== DATASET COURSE DESCRIPTIONS ======
+    const courseDescriptions = {
+        "Bahasa Indonesia": "Mengembangkan kemampuan komunikasi lisan dan tulisan yang efektif dan sesuai kaidah untuk keperluan akademis.",
+        "Pancasila": "Memahami Pancasila sebagai dasar negara, ideologi, dan pandangan hidup bangsa, serta menginternalisasikan nilai-nilainya dalam kehidupan sehari-hari.",
+        "Studi Islam Interdisipliner": "Mengkaji Islam dari berbagai sudut pandang keilmuan, menggabungkan ilmu-ilmu umum dan agama untuk pemahaman yang holistik.",
+        "Ilmu Dakwah": "Mempelajari strategi dan metode penyebaran nilai-nilai Islam, termasuk komunikasi, retorika, dan manajemen dakwah.",
+        "Bahasa Inggris": "Menguasai kemampuan berbahasa Inggris untuk mendukung literatur akademik, penelitian, dan komunikasi internasional.",
+        "Biopsikologi": "Mempelajari hubungan antara proses biologis (otak, sistem saraf) dengan perilaku dan fungsi mental.",
+        "Sejarah dan Aliran Psikologi": "Menggali perkembangan ilmu psikologi dari masa ke masa, serta memahami berbagai aliran pemikiran yang ada.",
+        "Psikologi Umum": "Pengantar fundamental yang mencakup konsep dasar psikologi seperti sensasi, persepsi, memori, dan emosi.",
+        "Filsafat Islam": "Memahami pemikiran filosofis dalam tradisi Islam, mulai dari metafisika, etika, hingga epistemologi, yang menjadi landasan bagi psikologi Islam.",
+        "Kewarganegaraan": "Mempelajari hak, kewajiban, dan peran sebagai warga negara Indonesia yang baik, serta memahami sistem politik dan hukum.",
+        "Bahasa Arab": "Mempelajari tata bahasa dan kosa kata Bahasa Arab untuk dapat memahami sumber-sumber primer keislaman seperti Al-Quran dan Hadis.",
+        "Digitalpreneuer": "Mengembangkan jiwa kewirausahaan di era digital, termasuk strategi bisnis online dan inovasi.",
+        "Islam Multikultural": "Mengkaji keragaman budaya dalam Islam dan bagaimana nilai-nilai Islam dapat berinteraksi secara harmonis di tengah masyarakat majemuk.",
+        "Filsafat Manusia": "Memahami hakikat manusia dari perspektif filosofis, termasuk eksistensi, kesadaran, dan tujuan hidup.",
+        "Dasar Pemikiran Psikologi Islam": "Mengidentifikasi dasar-dasar konseptual dan filosofis dari psikologi yang bersumber dari ajaran Islam.",
+        "Sosiologi": "Memahami struktur masyarakat, interaksi sosial, dan pengaruhnya terhadap perilaku individu.",
+        "Psikologi Pendidikan": "Mengkaji teori-teori psikologi yang diterapkan dalam proses belajar-mengajar, baik di sekolah maupun luar sekolah.",
+        "Psikologi Perkembangan": "Memahami perubahan fisik, kognitif, dan sosial yang dialami individu sepanjang rentang kehidupannya.",
+        "Filsafat Ilmu Psikologi": "Menggali landasan filosofis ilmu psikologi, termasuk isu-isu tentang kebenaran, realitas, dan metode ilmiah.",
+        "Pengantar Asesmen Psikologi": "Pengenalan tentang metode dan alat-alat untuk mengukur aspek-aspek psikologis seperti kepribadian dan inteligensi.",
+        "Psikologi Belajar": "Mempelajari teori dan prinsip bagaimana manusia belajar, mulai dari pengkondisian hingga pembelajaran kognitif.",
+        "Psikologi Industri dan Organisasi": "Menerapkan prinsip psikologi dalam lingkungan kerja untuk meningkatkan produktivitas, kepuasan, dan kesejahteraan karyawan.",
+        "Psikologi Klinis": "Mempelajari diagnosis, pencegahan, dan penanganan masalah psikologis dan gangguan mental.",
+        "Psikologi Kognitif": "Memahami proses mental seperti pemikiran, pengambilan keputusan, pemecahan masalah, dan bahasa.",
+        "Psikologi Sosial": "Mengkaji bagaimana pikiran, perasaan, dan perilaku individu dipengaruhi oleh orang lain dan lingkungan sosial.",
+        "Statistika Dasar": "Menguasai konsep dasar statistik untuk mengolah dan menganalisis data dalam penelitian psikologi.",
+        "Psikologi Agama": "Mempelajari peran agama dan spiritualitas dalam kehidupan psikologis individu.",
+        "Teori Kepribadian": "Mempelajari berbagai teori yang menjelaskan karakteristik unik individu dan bagaimana kepribadian terbentuk.",
+        "Kode Etik Psikologi": "Memahami dan menerapkan aturan etika dalam praktik profesional dan penelitian psikologi.",
+        "Statistika Lanjutan": "Mendalami teknik statistik yang lebih kompleks untuk analisis data penelitian.",
+        "Metode Penelitian Kuantitatif": "Mempelajari cara merancang, melaksanakan, dan melaporkan penelitian yang menggunakan data numerik.",
+        "Psikometri": "Memahami prinsip-prinsip pembuatan, validasi, dan standarisasi alat ukur psikologi.",
+        "Intervensi Psikologi Non-Klinis": "Mengembangkan program intervensi untuk meningkatkan kesejahteraan individu dan kelompok di luar konteks klinis.",
+        "Asesmen Psikologi: Observasi dan Wawancara": "Mempelajari teknik pengumpulan data psikologis melalui pengamatan langsung dan wawancara terstruktur.",
+        "Psikologi Islam": "Mata kuliah inti yang mengintegrasikan teori-teori psikologi konvensional dengan konsep-konsep Islam untuk memahami perilaku manusia.",
+        "Metode Penelitian Kualitatif": "Mempelajari cara merancang dan melaksanakan penelitian yang berfokus pada pemahaman mendalam tentang fenomena sosial dan psikologis.",
+        "Psikologi Eksperimen": "Merancang dan melakukan eksperimen untuk menguji hipotesis tentang hubungan sebab-akibat dalam perilaku manusia.",
+        "Desain Pelatihan": "Merancang, mengembangkan, dan mengevaluasi program pelatihan untuk berbagai kebutuhan.",
+        "Psikologi Abnormal": "Mempelajari perilaku abnormal, gangguan mental, dan cara mendiagnosisnya.",
+        "Asesmen Psikologi: Inventori Minat dan Bakat": "Menggunakan alat ukur psikologi untuk mengidentifikasi minat dan bakat individu.",
+        "Asesmen Psikologi: Tes Inteligensi": "Menggunakan berbagai tes standar untuk mengukur kemampuan kognitif dan inteligensi.",
+        "Asesmen Psikologi: Tes Kepribadian": "Menggunakan alat-alat asesmen untuk mengukur karakteristik kepribadian individu.",
+        "Psikologi Konseling": "Mempelajari teori, teknik, dan praktik dalam memberikan bantuan psikologis untuk mengatasi masalah individu.",
+        "Pengembangan Diri dan Karir": "Membantu mahasiswa mengidentifikasi potensi diri, merencanakan karir, dan meningkatkan soft skills.",
+        "Konstruksi Alat Ukur Psikologi": "Membuat alat tes psikologi yang valid dan reliabel dari tahap perancangan hingga pengujian.",
+        "Psikologi Lintas Budaya": "Memahami bagaimana budaya memengaruhi perilaku, pikiran, dan perasaan manusia.",
+        "Modifikasi Perilaku": "Mempelajari teknik-teknik untuk mengubah perilaku yang tidak diinginkan menjadi perilaku yang lebih adaptif.",
+        "KKN": "Praktik pengabdian masyarakat untuk menerapkan ilmu yang telah dipelajari dalam memecahkan masalah di lapangan.",
+        "Praktik Profesi Lapangan": "Pengalaman kerja magang di lembaga terkait psikologi untuk mendapatkan pengalaman profesional.",
+        "Skripsi": "Penulisan karya ilmiah mandiri sebagai syarat kelulusan, di mana mahasiswa melakukan penelitian secara mendalam pada topik tertentu."
+    };
+
+    // ====== DATASET LENGKAP 76 MATA KULIAH ======
+    const mkDataset = [
+        // Semester 1 (20 SKS)
+        { id: 1, nama: "Bahasa Indonesia", semester: 1, sks: 2, jenis: "Wajib", cpls: ["CPL 14"] },
+        { id: 2, nama: "Pancasila", semester: 1, sks: 2, jenis: "Wajib", cpls: ["CPL 4", "CPL 5"] },
+        { id: 3, nama: "Studi Islam Interdisipliner", semester: 1, sks: 2, jenis: "Wajib", cpls: ["CPL 1", "CPL 10"] },
+        { id: 4, nama: "Ilmu Dakwah", semester: 1, sks: 2, jenis: "Wajib", cpls: ["CPL 1", "CPL 7"] },
+        { id: 5, nama: "Bahasa Inggris", semester: 1, sks: 2, jenis: "Wajib", cpls: ["CPL 14"] },
+        { id: 6, nama: "Biopsikologi", semester: 1, sks: 3, jenis: "Wajib", cpls: ["CPL 6", "CPL 16"] },
+        { id: 7, nama: "Sejarah dan Aliran Psikologi", semester: 1, sks: 2, jenis: "Wajib", cpls: ["CPL 6", "CPL 9"] },
+        { id: 8, nama: "Psikologi Umum", semester: 1, sks: 3, jenis: "Wajib", cpls: ["CPL 6"] },
+        { id: 9, nama: "Filsafat Islam", semester: 1, sks: 2, jenis: "Wajib", cpls: ["CPL 1", "CPL 7", "CPL 9"] },
+
+        // Semester 2 (20 SKS)
+        { id: 10, nama: "Kewarganegaraan", semester: 2, sks: 2, jenis: "Wajib", cpls: ["CPL 4", "CPL 5"] },
+        { id: 11, nama: "Bahasa Arab", semester: 2, sks: 2, jenis: "Wajib", cpls: ["CPL 14"] },
+        { id: 12, nama: "Digitalpreneuer", semester: 2, sks: 2, jenis: "Wajib", cpls: ["CPL 16", "CPL 9"] },
+        { id: 13, nama: "Islam Multikultural", semester: 2, sks: 2, jenis: "Wajib", cpls: ["CPL 1", "CPL 5", "CPL 7"] },
+        { id: 14, nama: "Filsafat Manusia", semester: 2, sks: 2, jenis: "Wajib", cpls: ["CPL 7", "CPL 9"] },
+        { id: 15, nama: "Dasar Pemikiran Psikologi Islam", semester: 2, sks: 2, jenis: "Wajib", cpls: ["CPL 1", "CPL 7", "CPL 9",
+            "CPL 10"
+        ] },
+        { id: 16, nama: "Sosiologi", semester: 2, sks: 2, jenis: "Wajib", cpls: ["CPL 5", "CPL 9"] },
+        { id: 17, nama: "Psikologi Pendidikan", semester: 2, sks: 3, jenis: "Wajib", cpls: ["CPL 6", "CPL 7", "CPL 9"] },
+        { id: 18, nama: "Psikologi Perkembangan", semester: 2, sks: 3, jenis: "Wajib", cpls: ["CPL 6", "CPL 7", "CPL 9"] },
+
+        // Semester 3 (24 SKS)
+        { id: 19, nama: "Filsafat Ilmu Psikologi", semester: 3, sks: 2, jenis: "Wajib", cpls: ["CPL 6", "CPL 9"] },
+        { id: 20, nama: "Pengantar Asesmen Psikologi", semester: 3, sks: 2, jenis: "Wajib", cpls: ["CPL 6", "CPL 11",
+            "CPL 12"
+        ] },
+        { id: 21, nama: "Psikologi Belajar", semester: 3, sks: 3, jenis: "Wajib", cpls: ["CPL 6", "CPL 7", "CPL 9"] },
+        { id: 22, nama: "Psikologi Industri dan Organisasi", semester: 3, sks: 3, jenis: "Wajib", cpls: ["CPL 6",
+            "CPL 13"
+        ] },
+        { id: 23, nama: "Psikologi Klinis", semester: 3, sks: 3, jenis: "Wajib", cpls: ["CPL 2", "CPL 6", "CPL 13",
+            "CPL 16"
+        ] },
+        { id: 24, nama: "Psikologi Kognitif", semester: 3, sks: 2, jenis: "Wajib", cpls: ["CPL 6", "CPL 7", "CPL 9"] },
+        { id: 25, nama: "Psikologi Sosial", semester: 3, sks: 3, jenis: "Wajib", cpls: ["CPL 5", "CPL 6", "CPL 9"] },
+        { id: 26, nama: "Statistika Dasar", semester: 3, sks: 2, jenis: "Wajib", cpls: ["CPL 8", "CPL 12"] },
+        { id: 27, nama: "Psikologi Agama", semester: 3, sks: 2, jenis: "Wajib", cpls: ["CPL 5", "CPL 6", "CPL 9"] },
+        { id: 28, nama: "Psikologi Anak Berkebutuhan Khusus (P)", semester: 3, sks: 2, jenis: "Pilihan", cpls: ["CPL 6",
+            "CPL 7", "CPL 13", "CPL 16"
+        ] },
+        { id: 29, nama: "Psikologi Kesehatan (P)", semester: 3, sks: 2, jenis: "Pilihan", cpls: ["CPL 2", "CPL 6",
+            "CPL 13", "CPL 16"
+        ] },
+        { id: 30, nama: "Psikologi Politik (P)", semester: 3, sks: 2, jenis: "Pilihan", cpls: ["CPL 5", "CPL 6",
+        "CPL 9"] },
+        { id: 31, nama: "Psikologi Positif (P)", semester: 3, sks: 2, jenis: "Pilihan", cpls: ["CPL 3", "CPL 6",
+            "CPL 16"
+        ] },
+
+        // Semester 4 (24 SKS)
+        { id: 32, nama: "Teori Kepribadian", semester: 4, sks: 3, jenis: "Wajib", cpls: ["CPL 2", "CPL 6"] },
+        { id: 33, nama: "Kode Etik Psikologi", semester: 4, sks: 2, jenis: "Wajib", cpls: ["CPL 2", "CPL 3", "CPL 4"] },
+        { id: 34, nama: "Statistika Lanjutan", semester: 4, sks: 2, jenis: "Wajib", cpls: ["CPL 8", "CPL 12",
+        "CPL 15"] },
+        { id: 35, nama: "Metode Penelitian Kuantitatif", semester: 4, sks: 3, jenis: "Wajib", cpls: ["CPL 8", "CPL 12",
+            "CPL 16"
+        ] },
+        { id: 36, nama: "Psikometri", semester: 4, sks: 3, jenis: "Wajib", cpls: ["CPL 8", "CPL 12"] },
+        { id: 37, nama: "Intervensi Psikologi Non-Klinis", semester: 4, sks: 3, jenis: "Wajib", cpls: ["CPL 13", "CPL 14",
+            "CPL 15", "CPL 16"
+        ] },
+        { id: 38, nama: "Asesmen Psikologi: Observasi dan Wawancara", semester: 4, sks: 3, jenis: "Wajib", cpls: [
+            "CPL 7", "CPL 9", "CPL 11"
+        ] },
+        { id: 39, nama: "Psikologi Islam", semester: 4, sks: 3, jenis: "Wajib", cpls: ["CPL 1", "CPL 7", "CPL 9",
+            "CPL 10"
+        ] },
+        { id: 40, nama: "Psikologi Kepemimpinan (P)", semester: 4, sks: 2, jenis: "Pilihan", cpls: ["CPL 4", "CPL 6",
+            "CPL 7", "CPL 9"
+        ] },
+        { id: 41, nama: "Psikologi Krisis Bencana (P)", semester: 4, sks: 2, jenis: "Pilihan", cpls: ["CPL 5", "CPL 9",
+            "CPL 13", "CPL 16"
+        ] },
+        { id: 42, nama: "Psikologi Anak Usia Dini (P)", semester: 4, sks: 2, jenis: "Pilihan", cpls: ["CPL 6", "CPL 7",
+            "CPL 13", "CPL 16"
+        ] },
+        { id: 43, nama: "Psikologi Pesantren (P)", semester: 4, sks: 2, jenis: "Pilihan", cpls: ["CPL 1", "CPL 5",
+            "CPL 7", "CPL 9"
+        ] },
+        { id: 44, nama: "Psikologi Ulayat (P)", semester: 4, sks: 2, jenis: "Pilihan", cpls: ["CPL 5", "CPL 6",
+        "CPL 9"] },
+        { id: 45, nama: "Kesehatan Mental (P)", semester: 4, sks: 2, jenis: "Pilihan", cpls: ["CPL 2", "CPL 6",
+            "CPL 13", "CPL 16"
+        ] },
+
+        // Semester 5 (22 SKS)
+        { id: 46, nama: "Metode Penelitian Kualitatif", semester: 5, sks: 3, jenis: "Wajib", cpls: ["CPL 12",
+            "CPL 16"
+        ] },
+        { id: 47, nama: "Psikologi Eksperimen", semester: 5, sks: 3, jenis: "Wajib", cpls: ["CPL 8", "CPL 12",
+            "CPL 16"
+        ] },
+        { id: 48, nama: "Desain Pelatihan", semester: 5, sks: 3, jenis: "Wajib", cpls: ["CPL 13", "CPL 14", "CPL 15",
+            "CPL 16"
+        ] },
+        { id: 49, nama: "Psikologi Abnormal", semester: 5, sks: 3, jenis: "Wajib", cpls: ["CPL 2", "CPL 6", "CPL 13",
+            "CPL 16"
+        ] },
+        { id: 50, nama: "Asesmen Psikologi: Inventori Minat dan Bakat", semester: 5, sks: 3, jenis: "Wajib", cpls: [
+            "CPL 6", "CPL 7", "CPL 12", "CPL 13"
+        ] },
+        { id: 51, nama: "Asesmen Psikologi: Tes Inteligensi", semester: 5, sks: 3, jenis: "Wajib", cpls: ["CPL 6",
+            "CPL 7", "CPL 12", "CPL 13"
+        ] },
+        { id: 52, nama: "Kajian Psikologis Qur'ani (P)", semester: 5, sks: 2, jenis: "Pilihan", cpls: ["CPL 1", "CPL 7",
+            "CPL 9", "CPL 10"
+        ] },
+        { id: 53, nama: "Psikologi Media dan Digital (P)", semester: 5, sks: 2, jenis: "Pilihan", cpls: ["CPL 6",
+            "CPL 7", "CPL 9", "CPL 16"
+        ] },
+        { id: 54, nama: "Psikologi Komunikasi (P)", semester: 5, sks: 2, jenis: "Pilihan", cpls: ["CPL 6", "CPL 9"] },
+        { id: 55, nama: "Psikologi Keluarga dan Pernikahan (P)", semester: 5, sks: 2, jenis: "Pilihan", cpls: ["CPL 6",
+            "CPL 7", "CPL 13", "CPL 16"
+        ] },
+        { id: 56, nama: "Psikologi Olahraga (P)", semester: 5, sks: 2, jenis: "Pilihan", cpls: ["CPL 6", "CPL 9",
+            "CPL 13", "CPL 16"
+        ] },
+        { id: 57, nama: "Psikologi Sumber Daya Manusia (P)", semester: 5, sks: 2, jenis: "Pilihan", cpls: ["CPL 6",
+            "CPL 13"
+        ] },
+        { id: 58, nama: "Psikologi Industri dan Bisnis Islam (P)", semester: 5, sks: 2, jenis: "Pilihan", cpls: ["CPL 4",
+            "CPL 6", "CPL 13"
+        ] },
+        { id: 59, nama: "Psikologi Forensik (P)", semester: 5, sks: 2, jenis: "Pilihan", cpls: ["CPL 6", "CPL 11"] },
+
+        // Semester 6 (20 SKS)
+        { id: 60, nama: "Asesmen Psikologi: Tes Kepribadian", semester: 6, sks: 3, jenis: "Wajib", cpls: ["CPL 6",
+            "CPL 7", "CPL 12", "CPL 13"
+        ] },
+        { id: 61, nama: "Psikologi Konseling", semester: 6, sks: 3, jenis: "Wajib", cpls: ["CPL 13", "CPL 14",
+            "CPL 15"
+        ] },
+        { id: 62, nama: "Pengembangan Diri dan Karir", semester: 6, sks: 2, jenis: "Wajib", cpls: ["CPL 3", "CPL 4",
+            "CPL 7"
+        ] },
+        { id: 63, nama: "Konstruksi Alat Ukur Psikologi", semester: 6, sks: 4, jenis: "Wajib", cpls: ["CPL 8",
+            "CPL 12"
+        ] },
+        { id: 64, nama: "Psikologi Lintas Budaya", semester: 6, sks: 3, jenis: "Wajib", cpls: ["CPL 5", "CPL 6"] },
+        { id: 65, nama: "Modifikasi Perilaku", semester: 6, sks: 3, jenis: "Wajib", cpls: ["CPL 7", "CPL 9", "CPL 13",
+            "CPL 16"
+        ] },
+        { id: 66, nama: "Psikologi Lingkungan (P)", semester: 6, sks: 2, jenis: "Pilihan", cpls: ["CPL 3", "CPL 6",
+            "CPL 16"
+        ] },
+        { id: 67, nama: "Psikologi Adiksi (P)", semester: 6, sks: 2, jenis: "Pilihan", cpls: ["CPL 6", "CPL 13",
+            "CPL 16"
+        ] },
+        { id: 68, nama: "Asesmen Center (P)", semester: 6, sks: 3, jenis: "Pilihan", cpls: ["CPL 4", "CPL 6", "CPL 11",
+            "CPL 13"
+        ] },
+        { id: 69, nama: "Psikologi Tasawuf (P)", semester: 6, sks: 2, jenis: "Pilihan", cpls: ["CPL 1", "CPL 7",
+            "CPL 9", "CPL 10"
+        ] },
+        { id: 70, nama: "Kesulitan Belajar (P)", semester: 6, sks: 3, jenis: "Pilihan", cpls: ["CPL 5", "CPL 6",
+            "CPL 7", "CPL 13"
+        ] },
+        { id: 71, nama: "Kajian Psikologis Fiqh (P)", semester: 6, sks: 2, jenis: "Pilihan", cpls: ["CPL 1", "CPL 7",
+            "CPL 9", "CPL 10"
+        ] },
+        { id: 72, nama: "Wawasan Ilmu Perilaku (P)", semester: 6, sks: 2, jenis: "Pilihan", cpls: ["CPL 6", "CPL 9",
+            "CPL 16"
+        ] },
+        { id: 73, nama: "Psikologi Gender (P)", semester: 6, sks: 2, jenis: "Pilihan", cpls: ["CPL 5", "CPL 6",
+        "CPL 9"] },
+
+        // Semester 7 (14 SKS)
+        { id: 74, nama: "KKN", semester: 7, sks: 4, jenis: "Wajib", cpls: ["CPL 1", "CPL 2", "CPL 3", "CPL 4", "CPL 5",
+            "CPL 16"
+        ] },
+        { id: 75, nama: "Praktik Profesi Lapangan", semester: 7, sks: 4, jenis: "Wajib", cpls: ["CPL 1", "CPL 2", "CPL 3",
+            "CPL 4", "CPL 5", "CPL 12", "CPL 13", "CPL 14", "CPL 15", "CPL 16"
+        ] },
+        { id: 76, nama: "Skripsi", semester: 7, sks: 6, jenis: "Wajib", cpls: ["CPL 2", "CPL 3", "CPL 4", "CPL 6",
+            "CPL 7", "CPL 8", "CPL 9", "CPL 11", "CPL 12", "CPL 13", "CPL 16"
+        ] },
+        // Semester 8: Skripsi lanjutan
+        { id: 77, nama: "Skripsi (Lanjutan)", semester: 8, sks: 6, jenis: "Wajib", cpls: ["CPL 2", "CPL 3", "CPL 4",
+            "CPL 6", "CPL 7", "CPL 8", "CPL 9", "CPL 11", "CPL 12", "CPL 13", "CPL 16"
+        ] }
+    ];
+
+    // ====== USER SELECTION STATE ======
+    let selectedCourses = {};
+    mkDataset.forEach(mk => {
+        selectedCourses[mk.id] = mk.jenis === "Wajib";
+    });
+
+    // ====== GENERATE RPS DATA ======
+    function generateRpsData(mkName) {
+        const course = mkDataset.find(m => m.nama === mkName) || mkDataset[0];
+        const SksVal = course.sks;
+        const cplList = course.cpls.join(', ');
+        const description = courseDescriptions[mkName] || "Deskripsi mata kuliah akan ditambahkan oleh dosen pengampu.";
+
+        let cpmks = [
+            `CPMK 1: Memahami konsep dasar dan paradigma utama yang berkaitan dengan kajian keilmuan ${mkName}.`,
+            `CPMK 2: Mampu menganalisis fenomena psikologis menggunakan kerangka teoretis ${mkName}.`,
+            `CPMK 3: Menunjukkan kemampuan aplikasi praktis dan komunikasi akademis yang baik.`
+        ];
+
+        let weeks = [
+            { week: "1-4", sub: "Orientasi silabus, dasar teoretis ruang lingkup keilmuan.", eval: "Resume" },
+            { week: "5-7", sub: "Analisis faktor-faktor internal dan eksternal dalam pembentukan perilaku.",
+            eval: "Presentasi" },
+            { week: "8", sub: "Ujian Tengah Semester (UTS)", eval: "UTS" },
+            { week: "9-15", sub: "Studi kasus fenomena sosial kemasyarakatan dan presentasi akhir.", eval: "Laporan" },
+            { week: "16", sub: "Ujian Akhir Semester (UAS)", eval: "Portofolio" }
+        ];
+
+        return { cpl: cplList, sks: `${SksVal} SKS`, cpmks: cpmks, weeks: weeks, description: description };
+    }
+
+    // ====== RENDER FUNCTIONS ======
+
+    // Render CPL Grid
+    function populateCPLGrid(data) {
+        const grid = document.getElementById('cplGrid');
+        grid.innerHTML = '';
+        data.forEach(item => {
+            let badgeColor = "bg-emerald-100 text-emerald-800 border-emerald-200";
+            if (item.domain === "Pengetahuan") badgeColor = "bg-blue-100 text-blue-800 border-blue-200";
+            if (item.domain === "Keterampilan Khusus") badgeColor = "bg-amber-100 text-amber-800 border-amber-200";
+            if (item.domain === "Keterampilan Umum") badgeColor = "bg-purple-100 text-purple-800 border-purple-200";
+
+            const card = document.createElement('div');
+            card.className =
+                "bg-white p-5 rounded-2xl border border-slate-200 shadow-md flex flex-col justify-between space-y-3 hover:shadow-lg hover:border-slate-300 transition-all relative overflow-hidden";
+            card.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-black font-heading tracking-wide ${badgeColor} border px-3 py-1 rounded-full font-mono shadow-sm">${item.kode}</span>
+                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-mono">${item.level}</span>
+                    </div>
+                    <p class="text-xs text-slate-700 leading-relaxed font-semibold">${item.deskripsi}</p>
+                    <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400 font-bold uppercase">
+                        <span>${item.domain}</span>
+                        <span class="text-emerald-600 font-extrabold">Terpetakan ✔️</span>
+                    </div>
+                `;
+            grid.appendChild(card);
+        });
+    }
+
+    // Filter CPL
+    function filterCPL(domain) {
+        const buttons = document.querySelectorAll('.cpl-filter-btn');
+        buttons.forEach(btn => {
+            btn.className =
+            "cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0 transition-all";
+        });
+        event.target.className =
+            "cpl-filter-btn px-4 py-2 bg-navy-700 text-white rounded-xl text-xs font-semibold shadow-sm shrink-0 transition-all";
+
+        if (domain === 'all') {
+            populateCPLGrid(cplDataset);
+        } else {
+            const filtered = cplDataset.filter(item => item.domain === domain);
+            populateCPLGrid(filtered);
+        }
+    }
+
+    // Render Bahan Kajian
+    function populateBahanKajian() {
+        const container = document.getElementById('bkContainer');
+        container.innerHTML = '';
+        bkDataset.forEach((bk, index) => {
+            let badgeClass = "bg-emerald-50 border-emerald-200 text-emerald-800";
+            if (index % 4 === 1) badgeClass = "bg-blue-50 border-blue-200 text-blue-800";
+            if (index % 4 === 2) badgeClass = "bg-amber-50 border-amber-200 text-amber-800";
+            if (index % 4 === 3) badgeClass = "bg-purple-50 border-purple-200 text-purple-800";
+
+            const card = document.createElement('div');
+            card.className =
+                "bg-slate-50/50 p-5 rounded-2xl border border-slate-200 hover:bg-white hover:shadow-lg transition-all space-y-3";
+            let cplTags = bk.cpls.map(c =>
+                `<span class="bg-slate-200/60 text-slate-700 font-semibold font-mono text-[9px] px-1.5 py-0.5 rounded shadow-sm">${c}</span>`
+                ).join(' ');
+            card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-slate-200/55 pb-2">
+                        <span class="font-extrabold text-xs font-heading ${badgeClass} border px-3 py-1 rounded-xl shadow-sm font-mono">${bk.kode}</span>
+                        <div class="flex gap-1">${cplTags}</div>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-xs font-heading">${bk.nama}</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed">${bk.deskripsi}</p>
+                    <div class="pt-2 text-[9px] text-slate-400 font-bold uppercase flex items-center justify-between">
+                        <span>Kurikulum PI 2024</span>
+                        <span class="text-emerald-700">Korelasi ✔️</span>
+                    </div>
+                `;
+            container.appendChild(card);
+        });
+    }
+
+    // Semester Stats
+    function populateSemesterStats() {
+        const statsGrid = document.getElementById('semesterStatsGrid');
+        statsGrid.innerHTML = '';
+        const semSksMap = {};
+        for (let i = 1; i <= 8; i++) semSksMap[i] = 0;
+        mkDataset.forEach(mk => {
+            if (selectedCourses[mk.id]) semSksMap[mk.semester] += mk.sks;
+        });
+        for (let i = 1; i <= 8; i += 2) {
+            const s1 = semSksMap[i] || 0;
+            const s2 = semSksMap[i + 1] || 0;
+            const maxClassS1 = s1 > 24 ? "text-rose-600 font-extrabold underline" : "text-emerald-700 font-extrabold";
+            const maxClassS2 = s2 > 24 ? "text-rose-600 font-extrabold underline" : "text-emerald-700 font-extrabold";
+            const div = document.createElement('div');
+            div.className =
+                "col-span-2 bg-white p-3.5 rounded-xl border border-slate-200 flex justify-between items-center shadow-sm";
+            div.innerHTML = `
+                    <div class="w-full">
+                        <span class="text-[9px] text-slate-400 font-bold block uppercase tracking-wider">Beban Belajar</span>
+                        <div class="flex items-center justify-between mt-1.5 w-full">
+                            <span class="text-xs text-slate-700 font-semibold">Sem ${i}: <strong class="${maxClassS1} text-sm font-mono">${s1} SKS</strong></span>
+                            <span class="text-xs text-slate-700 font-semibold">Sem ${i+1}: <strong class="${maxClassS2} text-sm font-mono">${s2} SKS</strong></span>
+                        </div>
+                    </div>
+                `;
+            statsGrid.appendChild(div);
+        }
+    }
+
+    // Toggle course selection
+    function toggleCourseSelection(courseId) {
+        const course = mkDataset.find(mk => mk.id === courseId);
+        if (course.jenis === "Wajib") return;
+        selectedCourses[courseId] = !selectedCourses[courseId];
+        filterMKTable();
+        populateSemesterStats();
+        populateMatrix();
+    }
+
+    // Populate MK Table
+    function populateMKTable(data) {
+        const tbody = document.getElementById('mkTableBody');
+        tbody.innerHTML = '';
+        if (data.length === 0) {
+            tbody.innerHTML =
+                `<tr><td colspan="7" class="p-8 text-center text-slate-400 italic bg-white">Mata kuliah tidak ditemukan.</td></tr>`;
+            return;
+        }
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.className = "hover:bg-slate-50 transition-colors border-b border-slate-100";
+            let statusCheckbox = "";
+            let rowBg = "bg-white";
+            if (row.jenis === "Wajib") {
+                statusCheckbox = `
+                        <div class="flex items-center justify-center">
+                            <input type="checkbox" checked disabled class="w-4.5 h-4.5 text-emerald-600 bg-emerald-100 border-emerald-300 rounded focus:ring-emerald-500 opacity-60 cursor-not-allowed">
+                        </div>
+                    `;
+            } else {
+                const isSelected = selectedCourses[row.id];
+                rowBg = isSelected ? "bg-amber-50/40" : "bg-slate-50/40";
+                statusCheckbox = `
+                        <div class="flex items-center justify-center">
+                            <input type="checkbox" ${isSelected ? 'checked' : ''} onclick="toggleCourseSelection(${row.id})" class="w-4.5 h-4.5 text-amber-600 bg-amber-50 border-amber-300 rounded focus:ring-amber-500 cursor-pointer shadow">
+                        </div>
+                    `;
+            }
+            let cplBadges = row.cpls.map(c =>
+                `<span class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded-md font-mono text-[9px] font-bold mr-1 inline-block shadow-sm">${c}</span>`
+                ).join('');
+            tr.className = `${rowBg} hover:bg-slate-50 transition-colors border-b border-slate-100`;
+            tr.innerHTML = `
+                    <td class="p-3 text-center border-r border-slate-100">${statusCheckbox}</td>
+                    <td class="p-3 font-bold text-slate-800 hover:text-navy-700 cursor-pointer transition-colors" onclick="loadCpmkToView('${row.nama}')">📖 ${row.nama}</td>
+                    <td class="p-3 text-center font-bold text-slate-600 font-mono">${row.semester}</td>
+                    <td class="p-3 text-center font-extrabold text-slate-800 font-mono text-sm">${row.sks} SKS</td>
+                    <td class="p-3 text-center"><span class="bg-slate-100 text-slate-700 border border-slate-200 px-2.5 py-0.5 rounded-full text-[10px] font-bold">${row.jenis}</span></td>
+                    <td class="p-3">${cplBadges}</td>
+                    <td class="p-3 text-center font-black text-emerald-700 bg-emerald-50/40 text-xs">${row.cpls.length} CPL</td>
+                `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // Filter MK Table
+    function filterMKTable() {
+        const searchVal = document.getElementById('mkSearchInput').value.toLowerCase();
+        const semesterVal = document.getElementById('mkSemesterFilter').value;
+        const jenisVal = document.getElementById('mkJenisFilter').value;
+        const cplVal = document.getElementById('mkCPLFilter').value;
+        const filtered = mkDataset.filter(item => {
+            const matchesSearch = item.nama.toLowerCase().includes(searchVal);
+            const matchesSemester = semesterVal === "" || item.semester.toString() === semesterVal;
+            const matchesJenis = jenisVal === "" || item.jenis === jenisVal;
+            const matchesCpl = cplVal === "" || item.cpls.includes(cplVal);
+            return matchesSearch && matchesSemester && matchesJenis && matchesCpl;
+        });
+        populateMKTable(filtered);
+    }
+
+    // Populate Matrix
+    function populateMatrix() {
+        const tbody = document.getElementById('matrixTableBody');
+        tbody.innerHTML = '';
+        mkDataset.forEach(row => {
+            if (!selectedCourses[row.id]) return;
+            const tr = document.createElement('tr');
+            tr.className = "hover:bg-amber-100/40 border-b border-slate-150 transition-colors";
+            let cellsHtml =
+                `<td class="p-3 text-left font-bold text-slate-800 border-r border-slate-200 cursor-pointer hover:text-navy-700 max-w-[220px]" onclick="loadCpmkToView('${row.nama}')">📖 ${row.nama}</td>`;
+            for (let i = 1; i <= 16; i++) {
+                const cplKey = `CPL ${i}`;
+                const hasCpl = row.cpls.includes(cplKey);
+                const indicator = hasCpl ?
+                    `<span class="bg-navy-600 text-white font-extrabold w-4 h-4 rounded-full flex items-center justify-center mx-auto text-[8px] shadow-sm transform scale-110 matrix-cell">●</span>` :
+                    `<span class="text-slate-300 font-light">-</span>`;
+                cellsHtml +=
+                    `<td class="p-2 border-r border-slate-150 text-center ${hasCpl ? 'bg-navy-50/20' : ''}">${indicator}</td>`;
+            }
+            cellsHtml += `<td class="p-2 font-bold text-slate-800 bg-amber-50 font-mono text-xs">${row.sks}</td>`;
+            tr.innerHTML = cellsHtml;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // Load CPMK View
+    function loadCpmkToView(mkName) {
+        const rpsData = generateRpsData(mkName);
+        document.getElementById('cpmkDetailTitle').innerText = mkName;
+        document.getElementById('cpmkDetailSub').innerText = `RPS Detail — ${rpsData.sks}`;
+        document.getElementById('cpmkDetailCpl').innerText = rpsData.cpl;
+        document.getElementById('cpmkDetailSks').innerText = `${rpsData.sks} (RPS OBE)`;
+
+        const infoContainer = document.getElementById('courseInfoContainer');
+        infoContainer.innerHTML = `
+                <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                    <h4 class="font-bold text-emerald-900 text-sm flex items-center gap-2">
+                        <i class="fa-regular fa-file-lines"></i> Deskripsi Mata Kuliah
+                    </h4>
+                    <p class="text-sm text-slate-700 mt-1 leading-relaxed">${rpsData.description}</p>
+                </div>
+            `;
+
+        const cpmkContainer = document.getElementById('cpmkDetailCpmkList');
+        cpmkContainer.innerHTML = '';
+        rpsData.cpmks.forEach(c => {
+            const div = document.createElement('div');
+            div.className =
+                "flex gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700 leading-relaxed font-semibold";
+            div.innerHTML = `<span class="text-navy-600 font-bold text-sm">🎯</span> <span>${c}</span>`;
+            cpmkContainer.appendChild(div);
+        });
+
+        const weekTable = document.getElementById('cpmkDetailSubCpmkTable');
+        weekTable.innerHTML = '';
+        rpsData.weeks.forEach(w => {
+            const tr = document.createElement('tr');
+            tr.className = "hover:bg-slate-50 border-b border-slate-100";
+            tr.innerHTML = `
+                    <td class="p-3 text-center font-bold text-slate-600 font-mono bg-slate-50/50">${w.week}</td>
+                    <td class="p-3 text-slate-700 font-semibold">${w.sub}</td>
+                    <td class="p-3 text-center"><span class="bg-navy-50 text-navy-800 font-bold px-2 py-0.5 rounded text-[10px] border border-navy-200/50 shadow-sm">${w.eval}</span></td>
+                `;
+            weekTable.appendChild(tr);
+        });
+
+        switchTab('cpmk');
+        const cpmkButtons = document.querySelectorAll('.cpmk-mk-btn');
+        cpmkButtons.forEach(btn => {
+            if (btn.dataset.mkname === mkName) {
+                btn.className =
+                    "cpmk-mk-btn w-full text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-navy-700 text-white shadow-md transition-all";
+            } else {
+                btn.className =
+                    "cpmk-mk-btn w-full text-left text-xs font-semibold px-3 py-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 transition-all";
+            }
+        });
+    }
+
+    // Populate CPMK Left List
+    function populateCpmkMkList() {
+        const container = document.getElementById('cpmkMkList');
+        container.innerHTML = '';
+        mkDataset.forEach(mk => {
+            const btn = document.createElement('button');
+            btn.className =
+                "cpmk-mk-btn w-full text-left text-xs font-semibold px-3 py-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 transition-all flex items-center justify-between";
+            btn.dataset.mkname = mk.nama;
+            btn.innerHTML =
+                `<span>📖 ${mk.nama}</span> <span class="text-[9px] bg-slate-200/60 text-slate-600 px-1.5 py-0.5 rounded-md font-bold font-mono shadow-sm">${mk.sks} SKS</span>`;
+            btn.onclick = () => loadCpmkToView(mk.nama);
+            container.appendChild(btn);
+        });
+    }
+
+    function filterCpmkMkList() {
+        const val = document.getElementById('cpmkMkSearch').value.toLowerCase();
+        document.querySelectorAll('.cpmk-mk-btn').forEach(btn => {
+            btn.classList.toggle('hidden', !btn.innerText.toLowerCase().includes(val));
+        });
+    }
+
+    // TAB SWITCHER
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
+        document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.className =
+                "nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white";
+        });
+        const activeBtn = document.getElementById(`btn-${tabId}`);
+        if (activeBtn) {
+            activeBtn.className =
+                "nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-glow/20 text-white shadow-lg shadow-glow/10 border border-glow/20";
+        }
+
+        const titleMap = {
+            'dashboard': ['Beranda & Visi Saintifik', 'Visi keilmuan & filosofi OBE Psikologi Islam 2024', '📊'],
+            'peo-pl': ['Profil Lulusan', 'Profil target lulusan kompeten, kekinian, dan berakhlak mulia', '🎯'],
+            'cpl': ['CPL (1-16)', 'Capaian Pembelajaran Lulusan berbasis APSI & HIMPSI', '📜'],
+            'bk': ['18 Bahan Kajian', 'Struktur penguasaan materi teoretis keilmuan', '📚'],
+            'matakuliah': ['Struktur & Statistik MK', 'Distribusi 76 MK · 144 SKS kelulusan', '📖'],
+            'matriks': ['Matriks CPL vs MK', 'Korelasi sebaran CPL pada kurikulum', '🧮'],
+            'cpmk': ['CPMK & RPS', 'Silabus mingguan & kriteria penilaian', '🔬'],
+            'distingsi': ['Distingsi & Psychosophia Lab', 'Integrasi keislaman & laboratorium riset digital', '🏛️']
+        };
+        const info = titleMap[tabId] || ['Dashboard', '', '📊'];
+        document.getElementById('headerTitle').innerText = info[0];
+        document.getElementById('headerSubtitle').innerText = info[1];
+        document.getElementById('headerEmoji').innerText = info[2];
+        document.getElementById('contentArea').scrollTop = 0;
+    }
+
+    // TOAST
+    function showNotification(msg, type = "success") {
+        const toast = document.getElementById('toastNotification');
+        document.getElementById('toastMessage').innerText = msg;
+        document.getElementById('toastIcon').innerText = type === "success" ? "✔️" : "💡";
+        toast.className =
+            "fixed bottom-5 right-5 z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto";
+        setTimeout(() => {
+            toast.className =
+                "fixed bottom-5 right-5 z-50 transform translate-y-10 opacity-0 transition-all duration-300 pointer-events-none";
+        }, 3500);
+    }
+
+    // INIT
+    document.addEventListener("DOMContentLoaded", () => {
+        populateCPLGrid(cplDataset);
+        populateBahanKajian();
+        populateSemesterStats();
+        populateMKTable(mkDataset);
+        populateMatrix();
+        populateCpmkMkList();
+        loadCpmkToView("Dasar Pemikiran Psikologi Islam");
+        switchTab('dashboard');
+        showNotification("Kurikulum OBE Psikologi Islam siap!", "success");
+    });
+</script>
+
+</body>
+</html>
