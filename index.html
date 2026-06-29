@@ -24,39 +24,13 @@
                         heading: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            200: '#bbf7d0',
-                            500: '#22c55e',
-                            800: '#166534',
-                            900: '#14532d',
-                            950: '#052e16',
-                        },
-                        psych: {
-                            bg: '#FAF8F5',
-                            dark: '#2D221E',
-                            plum: '#4A2840',
-                            coral: '#E76F51',
-                            lavender: '#8D7BFF',
-                            sage: '#6B9E7A',
-                            border: '#EADBC8',
-                        },
-                        glow: '#4F8FFF',
-                        gold: '#D4AF37',
                         navy: {
-                            50: '#E8EDF8',
-                            100: '#C5D2F0',
-                            200: '#9DB5E8',
-                            300: '#6F95E0',
-                            400: '#4F7FD8',
-                            500: '#2A5CC4',
-                            600: '#1A3F8F',
-                            700: '#122B6A',
-                            800: '#0B1D45',
-                            900: '#060F28',
-                            950: '#030714',
-                        }
+                            50: '#E8EDF8', 100: '#C5D2F0', 200: '#9DB5E8',
+                            300: '#6F95E0', 400: '#4F7FD8', 500: '#2A5CC4',
+                            600: '#1A3F8F', 700: '#122B6A', 800: '#0B1D45',
+                            900: '#060F28', 950: '#030714',
+                        },
+                        gold: '#D4AF37',
                     }
                 }
             }
@@ -69,62 +43,56 @@
             height: 6px;
         }
         .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f5f9;
+            background: #1a2b4a;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
+            background: #D4AF37;
             border-radius: 4px;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
+            background: #e8c84a;
         }
 
         .tab-content {
             animation: fadeIn 0.4s ease-in-out;
         }
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .glass {
             background: rgba(11, 29, 69, 0.7);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(79, 143, 255, 0.15);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 80px rgba(79, 143, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
         }
         .glass-strong {
             background: rgba(11, 29, 69, 0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(79, 143, 255, 0.25);
-            box-shadow: 0 12px 56px rgba(0, 0, 0, 0.6), 0 0 100px rgba(79, 143, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 12px 56px rgba(0, 0, 0, 0.6);
         }
         .glow-text {
-            text-shadow: 0 0 30px rgba(79, 143, 255, 0.25), 0 0 80px rgba(79, 143, 255, 0.08);
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.15), 0 0 80px rgba(212, 175, 55, 0.05);
         }
 
         .btn-primary {
             background: linear-gradient(135deg, #1A3F8F, #2A5CC4);
-            border: 1px solid rgba(79, 143, 255, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             color: white;
             font-weight: 700;
             padding: 0.7rem 1.5rem;
             border-radius: 40px;
-            box-shadow: 0 8px 24px rgba(79, 143, 255, 0.15), 0 0 40px rgba(79, 143, 255, 0.04);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
             transition: all 0.3s ease;
         }
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 36px rgba(79, 143, 255, 0.25), 0 0 60px rgba(79, 143, 255, 0.06);
-            border-color: rgba(79, 143, 255, 0.5);
+            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
         }
         .btn-primary-gold {
             background: linear-gradient(135deg, #B8941E, #D4AF37);
@@ -133,12 +101,12 @@
             font-weight: 700;
             padding: 0.7rem 1.5rem;
             border-radius: 40px;
-            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
             transition: all 0.3s ease;
         }
         .btn-primary-gold:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 12px 36px rgba(212, 175, 55, 0.3);
         }
 
         .stat-card {
@@ -149,31 +117,26 @@
         }
 
         .card-cluster {
-            border-left: 4px solid #4F8FFF;
+            border-left: 4px solid #D4AF37;
             transition: all 0.3s ease;
         }
         .card-cluster:hover {
             transform: translateX(6px);
-            box-shadow: 0 8px 24px rgba(79, 143, 255, 0.08);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.08);
         }
         .card-cluster.integration {
             border-left-color: #D4AF37;
         }
         .card-cluster.behavioral {
-            border-left-color: #6B9E7A;
+            border-left-color: #4FC3F7;
         }
 
         .pulse-glow {
             animation: pulseGlow 3s ease-in-out infinite;
         }
         @keyframes pulseGlow {
-            0%,
-            100% {
-                box-shadow: 0 0 20px rgba(79, 143, 255, 0.05);
-            }
-            50% {
-                box-shadow: 0 0 50px rgba(79, 143, 255, 0.12);
-            }
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.05); }
+            50% { box-shadow: 0 0 50px rgba(212, 175, 55, 0.12); }
         }
 
         .logo-placeholder {
@@ -201,32 +164,71 @@
             transform: scale(1.15);
             z-index: 10;
         }
+
+        body {
+            background: #060F28;
+            color: #e2e8f0;
+        }
+
+        .nav-btn.active {
+            background: rgba(212, 175, 55, 0.15) !important;
+            color: #D4AF37 !important;
+            border: 1px solid rgba(212, 175, 55, 0.3) !important;
+        }
+
+        .table-wrap {
+            background: rgba(11, 29, 69, 0.4);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+        .table-wrap thead th {
+            color: #D4AF37;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+        }
+        .table-wrap tbody td {
+            color: #cbd5e1;
+        }
+        .table-wrap tbody tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .badge-cpl {
+            background: rgba(212, 175, 55, 0.1);
+            color: #D4AF37;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.6rem;
+            font-weight: 600;
+        }
+        .badge-sikap { background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.2); }
+        .badge-pengetahuan { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.2); }
+        .badge-ketkhusus { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.2); }
+        .badge-ketumum { background: rgba(139, 92, 246, 0.15); color: #a78bfa; border-color: rgba(139, 92, 246, 0.2); }
     </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col">
+<body class="bg-navy-950 font-sans text-slate-200 antialiased min-h-screen flex flex-col">
 
     <!-- ====== MAIN CONTAINER ====== -->
     <div class="flex flex-col lg:flex-row min-h-screen">
 
         <!-- ====== SIDEBAR NAVIGATION ====== -->
-        <aside class="w-full lg:w-72 bg-gradient-to-b from-navy-900 to-navy-950 text-white flex flex-col justify-between shrink-0 shadow-xl border-r border-navy-700/40 z-20 relative overflow-hidden">
-            <!-- Background glow -->
-            <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-glow/5 blur-3xl pointer-events-none"></div>
+        <aside class="w-full lg:w-72 bg-gradient-to-b from-navy-900 to-navy-950 text-white flex flex-col justify-between shrink-0 shadow-xl border-r border-gold/20 z-20 relative overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gold/5 blur-3xl pointer-events-none"></div>
 
             <div>
-                <!-- Brand Profile dengan Logo -->
-                <div class="p-4 border-b border-navy-700/50 relative z-10">
+                <div class="p-4 border-b border-gold/20 relative z-10">
                     <div class="flex items-center gap-3">
                         <div class="logo-placeholder">
                             <img src="iain.jpg" alt="IAIN SAS Babel" class="w-full h-full object-contain">
                         </div>
                         <div>
-                            <h2 class="font-heading font-bold text-sm tracking-wide text-glow leading-tight">KURIKULUM OBE</h2>
+                            <h2 class="font-heading font-bold text-sm tracking-wide text-gold leading-tight">KURIKULUM OBE</h2>
                             <p class="text-[10px] text-white/50 uppercase font-semibold tracking-widest mt-0.5">Psikologi Islam 2024</p>
                         </div>
                     </div>
-                    <div class="mt-2 bg-navy-800/50 p-2 rounded-lg border border-navy-700/50 text-[10px] text-white/60 leading-snug">
-                        <strong class="text-glow">IAIN SAS Babel</strong><br>Fakultas Dakwah dan Komunikasi Islam
+                    <div class="mt-2 bg-navy-800/50 p-2 rounded-lg border border-gold/20 text-[10px] text-white/60 leading-snug">
+                        <strong class="text-gold">IAIN SAS Babel</strong><br>Fakultas Dakwah dan Komunikasi Islam
                     </div>
                     <div class="mt-1.5 flex items-center gap-2">
                         <div class="logo-placeholder w-6 h-6">
@@ -236,9 +238,8 @@
                     </div>
                 </div>
 
-                <!-- Navigation Links -->
                 <nav class="p-4 space-y-1" id="sidebarNav">
-                    <button onclick="switchTab('dashboard')" id="btn-dashboard" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-glow/20 text-white shadow-lg shadow-glow/10 border border-glow/20">
+                    <button onclick="switchTab('dashboard')" id="btn-dashboard" class="nav-btn active w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
                         <span class="text-lg">📊</span> Beranda & Visi
                     </button>
                     <button onclick="switchTab('peo-pl')" id="btn-peo-pl" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
@@ -259,17 +260,15 @@
                     <button onclick="switchTab('cpmk')" id="btn-cpmk" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
                         <span class="text-lg">🔬</span> CPMK & RPS
                     </button>
-                    <!-- ====== MENU DISTINGSI & LAB (BARU) ====== -->
                     <button onclick="switchTab('distingsi')" id="btn-distingsi" class="nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-white/60 hover:bg-navy-700/40 hover:text-white">
                         <span class="text-lg">🏛️</span> Distingsi & Lab
                     </button>
                 </nav>
             </div>
 
-            <!-- Sidebar Footer with Psychosophia Lab (kecil) -->
-            <div class="p-3 border-t border-navy-700/50 bg-navy-900/60 text-center relative z-10">
+            <div class="p-3 border-t border-gold/20 bg-navy-900/60 text-center relative z-10">
                 <div class="flex items-center justify-center gap-2 text-[8px] text-white/30">
-                    <i class="fa-regular fa-circle-check text-glow/40"></i>
+                    <i class="fa-regular fa-circle-check text-gold/40"></i>
                     <span>Psychosophia Behavioral Lab</span>
                     <span class="text-white/20">·</span>
                     <span class="text-white/20">Pengembang</span>
@@ -281,31 +280,28 @@
         <main class="flex-1 flex flex-col overflow-hidden">
 
             <!-- Header bar -->
-           <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 py-3 flex flex-col sm:flex-row justify-between items-center gap-3 shadow-sm z-10 shrink-0">
-    <div class="flex items-center gap-3">
-        <span class="text-2xl" id="headerEmoji">📊</span>
-        <div>
-            <h1 class="text-base md:text-lg font-bold text-slate-800 font-heading leading-tight" id="headerTitle">Beranda & Visi Misi Kurikulum</h1>
-            <p class="text-[11px] md:text-xs text-slate-500" id="headerSubtitle">Dasar filosofis OBE Psikologi Islam 2024</p>
-        </div>
-    </div>
+            <header class="glass border-b border-gold/20 px-6 py-3 flex flex-col sm:flex-row justify-between items-center gap-3 shadow-sm z-10 shrink-0">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl" id="headerEmoji">📊</span>
+                    <div>
+                        <h1 class="text-base md:text-lg font-bold text-white font-heading leading-tight">Kurikulum OBE Psikologi Islam</h1>
+                        <p class="text-[11px] md:text-xs text-white/50" id="headerSubtitle">Dasar filosofis OBE Psikologi Islam 2024</p>
+                    </div>
+                </div>
 
-    <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
-        <!-- Tombol Kembali ke Hub -->
-        <a href="https://pi-iainbabel.github.io/psychosophia-hub/" 
-           class="bg-navy-800 hover:bg-navy-900 text-white text-xs font-bold px-4 py-2 rounded-xl border border-navy-700 shadow-md flex items-center gap-2 transition-all">
-            <i class="fas fa-home"></i> Kembali ke Hub
-        </a>
-        
-        <button onclick="window.print()" class="bg-navy-800 hover:bg-navy-900 text-white text-xs font-bold px-4 py-2 rounded-xl border border-navy-700 shadow-md flex items-center gap-2 transition-all">
-            🖨️ Cetak / PDF
-        </button>
-        <div class="bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-bold px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            PI-2024
-        </div>
-    </div>
-</header>
+                <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+                    <a href="https://pi-iainbabel.github.io/psychosophia-hub/" class="bg-navy-800 hover:bg-navy-700 text-white text-xs font-bold px-4 py-2 rounded-xl border border-gold/30 shadow-md flex items-center gap-2 transition-all">
+                        <i class="fas fa-home"></i> Kembali ke Hub
+                    </a>
+                    <button onclick="window.print()" class="bg-gold hover:bg-amber-400 text-navy-950 text-xs font-bold px-4 py-2 rounded-xl border border-gold/30 shadow-md flex items-center gap-2 transition-all">
+                        🖨️ Cetak / PDF
+                    </button>
+                    <div class="bg-gold/10 border border-gold/30 text-gold text-xs font-bold px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                        PI-2024
+                    </div>
+                </div>
+            </header>
 
             <!-- Main Scrollable Area -->
             <div class="flex-1 overflow-y-auto p-4 md:p-8 space-y-8 custom-scrollbar" id="contentArea">
@@ -316,7 +312,7 @@
                 <div id="tab-dashboard" class="tab-content space-y-8">
 
                     <!-- Visi Saintifik Prodi -->
-                    <div class="glass-strong rounded-3xl p-6 md:p-8 text-white border border-glow/10 shadow-2xl shadow-navy-950/50 relative overflow-hidden pulse-glow">
+                    <div class="glass-strong rounded-3xl p-6 md:p-8 text-white border border-gold/20 shadow-2xl shadow-navy-950/50 relative overflow-hidden pulse-glow">
                         <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none transform translate-y-8 translate-x-8">
                             <span class="text-[200px]">🕌</span>
                         </div>
@@ -327,7 +323,7 @@
                                 </span>
                                 <span class="text-[10px] text-white/30">Program Studi Psikologi Islam</span>
                             </div>
-                            <h2 class="text-xl md:text-3xl font-bold font-heading leading-tight text-glow glow-text">
+                            <h2 class="text-xl md:text-3xl font-bold font-heading leading-tight text-gold glow-text">
                                 Menyelenggarakan pendidikan sarjana psikologi untuk menghasilkan lulusan yang unggul, religius, dan profesional berdasarkan nilai-nilai Keislaman
                             </h2>
                             <p class="text-xs md:text-sm text-white/50 font-medium max-w-3xl leading-relaxed">
@@ -335,8 +331,8 @@
                                 Dirancang dengan prinsip Outcome-Based Education (OBE) dan Merdeka Belajar Kampus Merdeka (MBKM) — 144 SKS kelulusan.
                             </p>
                             <div class="flex flex-wrap gap-3 pt-2">
-                                <span class="bg-navy-800/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-building mr-1"></i> IAIN SAS Babel</span>
-                                <span class="bg-navy-800/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-brain mr-1"></i> Psychosophia Lab</span>
+                                <span class="bg-navy-800/50 px-3 py-1 rounded-full text-[9px] text-gold border border-gold/20"><i class="fa-regular fa-building mr-1"></i> IAIN SAS Babel</span>
+                                <span class="bg-navy-800/50 px-3 py-1 rounded-full text-[9px] text-gold border border-gold/20"><i class="fa-regular fa-brain mr-1"></i> Psychosophia Lab</span>
                                 <span class="bg-navy-800/50 px-3 py-1 rounded-full text-[9px] text-gold border border-gold/20"><i class="fa-regular fa-certificate mr-1"></i> PI-2024</span>
                             </div>
                         </div>
@@ -344,42 +340,42 @@
 
                     <!-- Stat Grid -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                        <div class="bg-white p-5 rounded-2xl border-2 border-emerald-100 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
-                            <div class="absolute top-0 left-0 h-full w-2 bg-emerald-600"></div>
+                        <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
+                            <div class="absolute top-0 left-0 h-full w-2 bg-gold"></div>
                             <div>
-                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Total CPL</span>
-                                <span class="text-3xl font-black font-heading text-emerald-900 block mt-1">16</span>
-                                <span class="text-[11px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded block mt-1.5">4 Domain</span>
+                                <span class="text-xs font-bold text-white/50 uppercase tracking-wider block">Total CPL</span>
+                                <span class="text-3xl font-black font-heading text-gold block mt-1">16</span>
+                                <span class="text-[11px] bg-gold/10 text-gold font-bold px-1.5 py-0.5 rounded block mt-1.5">4 Domain</span>
                             </div>
                             <span class="text-4xl filter drop-shadow">📜</span>
                         </div>
 
-                        <div class="bg-white p-5 rounded-2xl border-2 border-blue-100 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
-                            <div class="absolute top-0 left-0 h-full w-2 bg-blue-600"></div>
+                        <div class="bg-navy-800/40 p-5 rounded-2xl border border-blue-400/20 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
+                            <div class="absolute top-0 left-0 h-full w-2 bg-blue-400"></div>
                             <div>
-                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Mata Kuliah</span>
-                                <span class="text-3xl font-black font-heading text-blue-900 block mt-1">76</span>
-                                <span class="text-[11px] bg-blue-100 text-blue-800 font-bold px-1.5 py-0.5 rounded block mt-1.5">51 Wajib · 25 Pilihan</span>
+                                <span class="text-xs font-bold text-white/50 uppercase tracking-wider block">Mata Kuliah</span>
+                                <span class="text-3xl font-black font-heading text-blue-400 block mt-1">76</span>
+                                <span class="text-[11px] bg-blue-400/10 text-blue-400 font-bold px-1.5 py-0.5 rounded block mt-1.5">51 Wajib · 25 Pilihan</span>
                             </div>
                             <span class="text-4xl filter drop-shadow">📖</span>
                         </div>
 
-                        <div class="bg-white p-5 rounded-2xl border-2 border-amber-100 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
-                            <div class="absolute top-0 left-0 h-full w-2 bg-amber-600"></div>
+                        <div class="bg-navy-800/40 p-5 rounded-2xl border border-amber-400/20 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
+                            <div class="absolute top-0 left-0 h-full w-2 bg-amber-400"></div>
                             <div>
-                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Bobot Kelulusan</span>
-                                <span class="text-3xl font-black font-heading text-amber-900 block mt-1">144 <span class="text-xs font-medium text-slate-400">SKS</span></span>
-                                <span class="text-[11px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded block mt-1.5">Standar MBKM</span>
+                                <span class="text-xs font-bold text-white/50 uppercase tracking-wider block">Bobot Kelulusan</span>
+                                <span class="text-3xl font-black font-heading text-amber-400 block mt-1">144 <span class="text-xs font-medium text-white/40">SKS</span></span>
+                                <span class="text-[11px] bg-amber-400/10 text-amber-400 font-bold px-1.5 py-0.5 rounded block mt-1.5">Standar MBKM</span>
                             </div>
                             <span class="text-4xl filter drop-shadow">🎓</span>
                         </div>
 
-                        <div class="bg-white p-5 rounded-2xl border-2 border-purple-100 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
-                            <div class="absolute top-0 left-0 h-full w-2 bg-purple-600"></div>
+                        <div class="bg-navy-800/40 p-5 rounded-2xl border border-purple-400/20 shadow-md flex items-center justify-between relative overflow-hidden stat-card">
+                            <div class="absolute top-0 left-0 h-full w-2 bg-purple-400"></div>
                             <div>
-                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Bahan Kajian</span>
-                                <span class="text-3xl font-black font-heading text-purple-900 block mt-1">18</span>
-                                <span class="text-[11px] bg-purple-100 text-purple-800 font-bold px-1.5 py-0.5 rounded block mt-1.5">Pokok Pembahasan</span>
+                                <span class="text-xs font-bold text-white/50 uppercase tracking-wider block">Bahan Kajian</span>
+                                <span class="text-3xl font-black font-heading text-purple-400 block mt-1">18</span>
+                                <span class="text-[11px] bg-purple-400/10 text-purple-400 font-bold px-1.5 py-0.5 rounded block mt-1.5">Pokok Pembahasan</span>
                             </div>
                             <span class="text-4xl filter drop-shadow">🔬</span>
                         </div>
@@ -389,19 +385,20 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                         <!-- Visi Misi -->
-                        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-lg flex flex-col justify-between">
-                            <div class="bg-emerald-100/70 p-6 border-b border-emerald-200">
-                                <span class="text-xs font-bold tracking-widest text-emerald-800 uppercase">Arah Strategis</span>
-                                <h3 class="text-xl font-bold font-heading text-emerald-950 mt-1">Visi & Misi</h3>
+                        <div class="bg-navy-800/40 rounded-2xl border border-gold/20 overflow-hidden shadow-lg flex flex-col justify-between">
+                            <div class="bg-gold/10 p-6 border-b border-gold/20">
+                                <span class="text-xs font-bold tracking-widest text-gold uppercase">Arah Strategis</span>
+                                <h3 class="text-xl font-bold font-heading text-gold mt-1">Visi & Misi</h3>
                             </div>
                             <div class="p-6 md:p-8 space-y-6">
-                                <div class="bg-emerald-50/50 p-5 rounded-xl border-l-4 border-emerald-600 space-y-2 relative">
-                                    <span class="absolute top-2 right-4 text-emerald-200/50 text-4xl font-black font-heading">VISI</span>
-                            </div>
-                                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3 relative">
-                                    <span class="absolute top-2 right-4 text-slate-200/60 text-4xl font-black font-heading">MISI</span>
-                                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wider">Misi Akselerasi</h4>
-                                    <ol class="list-decimal list-inside space-y-2 text-xs text-slate-600 leading-relaxed">
+                                <div class="bg-navy-900/50 p-5 rounded-xl border-l-4 border-gold space-y-2 relative">
+                                    <span class="absolute top-2 right-4 text-gold/20 text-4xl font-black font-heading">VISI</span>
+                                    <p class="text-sm text-white/80 leading-relaxed font-medium">Menyelenggarakan pendidikan sarjana psikologi untuk menghasilkan lulusan yang unggul, religius, dan profesional berdasarkan nilai-nilai Keislaman.</p>
+                                </div>
+                                <div class="bg-navy-900/50 p-5 rounded-xl border border-gold/20 space-y-3 relative">
+                                    <span class="absolute top-2 right-4 text-gold/20 text-4xl font-black font-heading">MISI</span>
+                                    <h4 class="font-bold text-gold text-xs uppercase tracking-wider">Misi Akselerasi</h4>
+                                    <ol class="list-decimal list-inside space-y-2 text-xs text-white/60 leading-relaxed">
                                         <li>Membentuk lulusan yang mampu melakukan integrasi dan interkoneksi keilmuan psikologi dengan pemahaman kajian keislaman.</li>
                                         <li>Menyelenggarakan pendidikan psikologi Islam yang fokus pada aspek psikologis dan religius dalam menganalisis gejala sosial.</li>
                                         <li>Menyelenggarakan penelitian di bidang psikologi Islam berlandaskan konsep psikologi dan kajian keislaman.</li>
@@ -413,28 +410,28 @@
                         </div>
 
                         <!-- PEO -->
-                        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-lg flex flex-col justify-between">
-                            <div class="bg-amber-100/70 p-6 border-b border-amber-200">
-                                <span class="text-xs font-bold tracking-widest text-amber-800 uppercase">Tujuan Pendidikan</span>
-                                <h3 class="text-xl font-bold font-heading text-amber-950 mt-1">Program Educational Objectives</h3>
+                        <div class="bg-navy-800/40 rounded-2xl border border-gold/20 overflow-hidden shadow-lg flex flex-col justify-between">
+                            <div class="bg-gold/10 p-6 border-b border-gold/20">
+                                <span class="text-xs font-bold tracking-widest text-gold uppercase">Tujuan Pendidikan</span>
+                                <h3 class="text-xl font-bold font-heading text-gold mt-1">Program Educational Objectives</h3>
                             </div>
                             <div class="p-6 md:p-8 space-y-4">
-                                <div class="bg-amber-50/50 p-5 rounded-xl border border-amber-200 text-xs space-y-3 leading-relaxed">
-                                    <p class="text-slate-700 font-semibold text-xs leading-relaxed">
+                                <div class="bg-navy-900/50 p-5 rounded-xl border border-gold/20 text-xs space-y-3 leading-relaxed">
+                                    <p class="text-white/70 font-semibold text-xs leading-relaxed">
                                         Lulusan Psikologi Islam mampu berkiprah optimal di masyarakat dalam 3-5 tahun setelah kelulusan dengan tujuan:
                                     </p>
                                     <div class="space-y-3 pt-2">
                                         <div class="flex gap-3">
-                                            <span class="bg-amber-600 text-white font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">1</span>
-                                            <p class="text-slate-600 leading-relaxed"><strong class="text-amber-950 font-bold block">Integrasi Keilmuan:</strong> Mensinergikan psikologi modern dengan nilai-nilai Islam.</p>
+                                            <span class="bg-gold text-navy-950 font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">1</span>
+                                            <p class="text-white/60 leading-relaxed"><strong class="text-gold font-bold block">Integrasi Keilmuan:</strong> Mensinergikan psikologi modern dengan nilai-nilai Islam.</p>
                                         </div>
                                         <div class="flex gap-3">
-                                            <span class="bg-amber-600 text-white font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">2</span>
-                                            <p class="text-slate-600 leading-relaxed"><strong class="text-amber-950 font-bold block">Integritas Etik:</strong> Menjunjung Kode Etik Psikologi Indonesia dan etika kepribadian muslim.</p>
+                                            <span class="bg-gold text-navy-950 font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">2</span>
+                                            <p class="text-white/60 leading-relaxed"><strong class="text-gold font-bold block">Integritas Etik:</strong> Menjunjung Kode Etik Psikologi Indonesia dan etika kepribadian muslim.</p>
                                         </div>
                                         <div class="flex gap-3">
-                                            <span class="bg-amber-600 text-white font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">3</span>
-                                            <p class="text-slate-600 leading-relaxed"><strong class="text-amber-950 font-bold block">Responsibilitas Umat:</strong> Memberikan solusi psikoedukatif berorientasi kemaslahatan masyarakat.</p>
+                                            <span class="bg-gold text-navy-950 font-extrabold w-6 h-6 rounded-full flex items-center justify-center text-xs shrink-0 shadow">3</span>
+                                            <p class="text-white/60 leading-relaxed"><strong class="text-gold font-bold block">Responsibilitas Umat:</strong> Memberikan solusi psikoedukatif berorientasi kemaslahatan masyarakat.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -447,35 +444,35 @@
                 <!-- TAB 2: PROFIL LULUSAN -->
                 <!-- ========================================================== -->
                 <div id="tab-peo-pl" class="tab-content hidden space-y-6">
-                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-xs text-amber-900 font-medium shadow-inner">
-                        📌 Profil Lulusan (PL) dirumuskan berdasarkan dialektika SN-DIKTI, Asosiasi Penyelenggara Pendidikan Tinggi Psikologi Indonesia (AP2TPI), Konsorsium Keilmuan Psikologi Perguruan Tinggi Keagamaan Islam(K2P-PTKI), kebutuhan dunia kontemporer, dan modalitas lokal yang mengakar dengan pilar muatan Psikologi Islam integratif.
+                    <div class="bg-gold/10 border border-gold/20 p-4 rounded-xl text-xs text-gold font-medium shadow-inner">
+                        📌 Profil Lulusan (PL) dirumuskan berdasarkan dialektika SN-DIKTI, Asosiasi Penyelenggara Pendidikan Tinggi Psikologi Indonesia (AP2TPI), Konsorsium Keilmuan Psikologi Perguruan Tinggi Keagamaan Islam (K2P-PTKI), kebutuhan dunia kontemporer, dan modalitas lokal yang mengakar dengan pilar muatan Psikologi Islam integratif.
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <!-- PL 1 -->
-                        <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+                        <div class="bg-navy-800/40 rounded-2xl border border-gold/20 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl hover:shadow-gold/10 transition-all hover:-translate-y-1">
                             <span class="absolute top-4 right-4 text-3xl opacity-30">💼</span>
-                            <span class="bg-emerald-100 text-emerald-900 font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 1</span>
-                            <h3 class="text-lg font-bold text-slate-800 font-heading">Asisten Psikolog</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">
+                            <span class="bg-gold/20 text-gold font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 1</span>
+                            <h3 class="text-lg font-bold text-white font-heading">Asisten Psikolog</h3>
+                            <p class="text-xs text-white/60 leading-relaxed">
                                 Membantu tugas psikolog profesional: skoring alat tes, administrasi tes dasar di bawah supervisi, merancang, melakukan, mengevaluasi, dan melaporkan asesmen (observasi, wawancara) berdasarkan prinsip psikodiagnostika sesuai Kode Etik Psikologi Indonesia.
                             </p>
                         </div>
                         <!-- PL 2 -->
-                        <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+                        <div class="bg-navy-800/40 rounded-2xl border border-blue-400/20 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl hover:shadow-blue-400/10 transition-all hover:-translate-y-1">
                             <span class="absolute top-4 right-4 text-3xl opacity-30">🧠</span>
-                            <span class="bg-blue-100 text-blue-900 font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 2</span>
-                            <h3 class="text-lg font-bold text-slate-800 font-heading">Konsultan Bidang Psikologi</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">
+                            <span class="bg-blue-400/20 text-blue-400 font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 2</span>
+                            <h3 class="text-lg font-bold text-white font-heading">Konsultan Bidang Psikologi</h3>
+                            <p class="text-xs text-white/60 leading-relaxed">
                                 Memberikan solusi/rekomendasi berbasis riset di ranah non-klinis (sekolah, komunitas, UMKM, PIO). Mampu mengumpulkan & menganalisis data, menyusun laporan penelitian, serta merancang program intervensi sederhana/pelatihan yang sahih.
                             </p>
                         </div>
                         <!-- PL 3 -->
-                        <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl transition-all hover:-translate-y-1">
+                        <div class="bg-navy-800/40 rounded-2xl border border-purple-400/20 shadow-md p-6 space-y-4 relative overflow-hidden hover:shadow-xl hover:shadow-purple-400/10 transition-all hover:-translate-y-1">
                             <span class="absolute top-4 right-4 text-3xl opacity-30">🤝</span>
-                            <span class="bg-purple-100 text-purple-900 font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 3</span>
-                            <h3 class="text-lg font-bold text-slate-800 font-heading">Konselor / Penyuluh Psikologi</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed">
+                            <span class="bg-purple-400/20 text-purple-400 font-extrabold px-3 py-1 rounded-full text-xs font-mono">PL 3</span>
+                            <h3 class="text-lg font-bold text-white font-heading">Konselor / Penyuluh Psikologi</h3>
+                            <p class="text-xs text-white/60 leading-relaxed">
                                 Mampu merancang, melakukan, mengevaluasi, dan melaporkan program preventif/promotif (psikoedukasi, konseling sebaya, penyuluhan mental) berbasis integratif psikologi barat dan spiritual Islam untuk individu, keluarga, maupun komunitas.
                             </p>
                         </div>
@@ -488,11 +485,11 @@
                 <div id="tab-cpl" class="tab-content hidden space-y-6">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                         <div class="flex gap-2 overflow-x-auto pb-1 max-w-full">
-                            <button onclick="filterCPL('all')" class="cpl-filter-btn px-4 py-2 bg-navy-700 text-white rounded-xl text-xs font-semibold shadow-sm shrink-0">Semua Domain</button>
-                            <button onclick="filterCPL('Sikap')" class="cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0">Sikap</button>
-                            <button onclick="filterCPL('Pengetahuan')" class="cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0">Pengetahuan</button>
-                            <button onclick="filterCPL('Keterampilan Khusus')" class="cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0">Ket. Khusus</button>
-                            <button onclick="filterCPL('Keterampilan Umum')" class="cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0">Ket. Umum</button>
+                            <button onclick="filterCPL('all')" class="cpl-filter-btn px-4 py-2 bg-gold/20 text-gold rounded-xl text-xs font-semibold shadow-sm shrink-0 border border-gold/30">Semua Domain</button>
+                            <button onclick="filterCPL('Sikap')" class="cpl-filter-btn px-4 py-2 bg-navy-700/50 text-white/60 hover:bg-navy-600/50 rounded-xl text-xs font-semibold shrink-0 border border-white/5">Sikap</button>
+                            <button onclick="filterCPL('Pengetahuan')" class="cpl-filter-btn px-4 py-2 bg-navy-700/50 text-white/60 hover:bg-navy-600/50 rounded-xl text-xs font-semibold shrink-0 border border-white/5">Pengetahuan</button>
+                            <button onclick="filterCPL('Keterampilan Khusus')" class="cpl-filter-btn px-4 py-2 bg-navy-700/50 text-white/60 hover:bg-navy-600/50 rounded-xl text-xs font-semibold shrink-0 border border-white/5">Ket. Khusus</button>
+                            <button onclick="filterCPL('Keterampilan Umum')" class="cpl-filter-btn px-4 py-2 bg-navy-700/50 text-white/60 hover:bg-navy-600/50 rounded-xl text-xs font-semibold shrink-0 border border-white/5">Ket. Umum</button>
                         </div>
                     </div>
 
@@ -505,10 +502,10 @@
                 <!-- TAB 4: BAHAN KAJIAN (BK) -->
                 <!-- ========================================================== -->
                 <div id="tab-bk" class="tab-content hidden space-y-6">
-                    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-md space-y-4">
-                        <div class="border-b border-slate-100 pb-3">
-                            <h3 class="text-lg font-bold text-slate-800 font-heading">18 Bahan Kajian (BK) Psikologi Islam</h3>
-                            <p class="text-xs text-slate-500 leading-relaxed mt-1">
+                    <div class="bg-navy-800/40 rounded-2xl border border-gold/20 p-6 shadow-md space-y-4">
+                        <div class="border-b border-gold/20 pb-3">
+                            <h3 class="text-lg font-bold text-white font-heading">18 Bahan Kajian (BK) Psikologi Islam</h3>
+                            <p class="text-xs text-white/50 leading-relaxed mt-1">
                                 Diturunkan dari deskripsi BK kurikulum psikologi nasional Indonesia terintegrasi dengan epistemologi keislaman moderat.
                             </p>
                         </div>
@@ -524,24 +521,24 @@
                 <div id="tab-matakuliah" class="tab-content hidden space-y-6">
 
                     <!-- Statistik Course Card -->
-                    <div class="glass-strong rounded-3xl p-6 text-white border border-glow/10 shadow-2xl shadow-navy-950/50 relative overflow-hidden">
+                    <div class="glass-strong rounded-3xl p-6 text-white border border-gold/20 shadow-2xl shadow-navy-950/50 relative overflow-hidden">
                         <div class="relative z-10 flex flex-col md:flex-row justify-between items-stretch md:items-center gap-6">
                             <div class="space-y-2">
                                 <span class="bg-gold/20 text-gold font-black px-3 py-1 rounded-full text-[10px] tracking-wider uppercase border border-gold/30">OBE SIMULATION</span>
-                                <h3 class="text-xl md:text-2xl font-bold font-heading text-glow glow-text">Statistik Mata Kuliah</h3>
+                                <h3 class="text-xl md:text-2xl font-bold font-heading text-gold glow-text">Statistik Mata Kuliah</h3>
                                 <p class="text-xs text-white/50 max-w-xl leading-relaxed">
-                                    Kurikulum Psikologi Islam terdiri dari <strong class="text-glow">76 Mata Kuliah</strong> dengan total <strong class="text-gold">144 SKS</strong> kelulusan.
+                                    Kurikulum Psikologi Islam terdiri dari <strong class="text-gold">76 Mata Kuliah</strong> dengan total <strong class="text-gold">144 SKS</strong> kelulusan.
                                 </p>
                             </div>
 
                             <!-- Stat Cards -->
                             <div class="grid grid-cols-3 gap-3 min-w-[280px]">
-                                <div class="bg-navy-800/50 backdrop-blur-md p-4 rounded-2xl border border-glow/10 text-center stat-card">
+                                <div class="bg-navy-800/50 backdrop-blur-md p-4 rounded-2xl border border-gold/20 text-center stat-card">
                                     <span class="text-[9px] text-white/40 uppercase tracking-widest font-bold block">Total MK</span>
-                                    <span class="text-2xl font-black font-heading text-glow block">76</span>
+                                    <span class="text-2xl font-black font-heading text-gold block">76</span>
                                     <span class="text-[8px] text-white/30">Seluruh Mata Kuliah</span>
                                 </div>
-                                <div class="bg-navy-800/50 backdrop-blur-md p-4 rounded-2xl border border-emerald-500/20 text-center stat-card">
+                                <div class="bg-navy-800/50 backdrop-blur-md p-4 rounded-2xl border border-emerald-400/20 text-center stat-card">
                                     <span class="text-[9px] text-emerald-400 uppercase tracking-widest font-bold block">Wajib</span>
                                     <span class="text-2xl font-black font-heading text-emerald-400 block">51</span>
                                     <span class="text-[8px] text-white/30">136 SKS</span>
@@ -572,12 +569,12 @@
                     </div>
 
                     <!-- Filter controls -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+                    <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
                         <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 w-full flex-1">
                             <input type="text" id="mkSearchInput" onkeyup="filterMKTable()" placeholder="Cari mata kuliah..."
-                            class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700 shadow-inner">
+                            class="w-full bg-navy-900/50 border border-white/10 text-slate-200 text-xs rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:bg-navy-800/50 transition-all placeholder:text-white/30">
                             <select id="mkSemesterFilter" onchange="filterMKTable()"
-                            class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700 shadow-sm font-medium">
+                            class="w-full bg-navy-900/50 border border-white/10 text-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:bg-navy-800/50 transition-all font-medium">
                             <option value="">-- Semua Semester --</option>
                             <option value="1">Semester 1</option>
                             <option value="2">Semester 2</option>
@@ -589,13 +586,13 @@
                             <option value="8">Semester 8</option>
                         </select>
                         <select id="mkJenisFilter" onchange="filterMKTable()"
-                        class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700 shadow-sm font-medium">
+                        class="w-full bg-navy-900/50 border border-white/10 text-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:bg-navy-800/50 transition-all font-medium">
                         <option value="">-- Semua Jenis --</option>
                         <option value="Wajib">Wajib</option>
                         <option value="Pilihan">Pilihan / MBKM</option>
                     </select>
                     <select id="mkCPLFilter" onchange="filterMKTable()"
-                    class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700 shadow-sm font-medium">
+                    class="w-full bg-navy-900/50 border border-white/10 text-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:bg-navy-800/50 transition-all font-medium">
                     <option value="">-- Map CPL --</option>
                     <script>
                         for(let i=1; i<=16; i++) {
@@ -612,20 +609,20 @@
         </div>
 
         <!-- Master Table -->
-        <div class="overflow-x-auto border border-slate-200 rounded-xl shadow-md bg-white">
-            <table class="w-full text-left border-collapse text-xs shadow-inner" id="mkTable">
+        <div class="overflow-x-auto border border-gold/20 rounded-xl shadow-md bg-navy-800/30">
+            <table class="w-full text-left border-collapse text-xs" id="mkTable">
                 <thead>
-                    <tr class="bg-slate-100 text-slate-700 font-heading font-semibold border-b border-slate-200">
-                        <th class="p-3 w-16 text-center bg-slate-200/50 font-bold text-slate-800">Status</th>
+                    <tr class="border-b border-gold/20 text-gold font-heading font-semibold">
+                        <th class="p-3 w-16 text-center border-r border-gold/10">Status</th>
                         <th class="p-3">Nama Mata Kuliah</th>
                         <th class="p-3 text-center w-24">Semester</th>
                         <th class="p-3 text-center w-20">SKS</th>
                         <th class="p-3 text-center w-28">Jenis</th>
                         <th class="p-3">Distribusi CPL</th>
-                        <th class="p-3 text-center bg-emerald-50 text-emerald-950 w-28">Jumlah CPL</th>
+                        <th class="p-3 text-center bg-gold/5 text-gold w-28">Jumlah CPL</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-100 bg-white text-slate-700" id="mkTableBody">
+                <tbody class="divide-y divide-white/5 bg-transparent text-slate-300" id="mkTableBody">
                     <!-- JS populated -->
                 </tbody>
             </table>
@@ -636,27 +633,27 @@
     <!-- TAB 6: MATRIKS CPL VS MK -->
     <!-- ========================================================== -->
     <div id="tab-matriks" class="tab-content hidden space-y-6">
-        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md space-y-3">
-            <h3 class="text-base font-bold text-slate-800 font-heading">Matriks Pemetaan Kompetensi (Kurikulum Map)</h3>
-            <p class="text-xs text-slate-500 leading-relaxed">
-                Peta keterkaitan semua mata kuliah terhadap 16 CPL. Arahkan kursor ke sel <span class="text-emerald-700 font-bold">●</span> untuk melihat kecocokan. Klik nama mata kuliah untuk melihat CPMK.
+        <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md space-y-3">
+            <h3 class="text-base font-bold text-white font-heading">Matriks Pemetaan Kompetensi (Kurikulum Map)</h3>
+            <p class="text-xs text-white/50 leading-relaxed">
+                Peta keterkaitan semua mata kuliah terhadap 16 CPL. Arahkan kursor ke sel <span class="text-gold font-bold">●</span> untuk melihat kecocokan. Klik nama mata kuliah untuk melihat CPMK.
             </p>
         </div>
 
-        <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white shadow-md custom-scrollbar">
+        <div class="overflow-x-auto border border-gold/20 rounded-xl bg-navy-800/30 shadow-md custom-scrollbar">
             <table class="text-[10px] w-full text-center border-collapse" id="matrixTable">
                 <thead>
-                    <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-300">
-                        <th class="p-3 text-left w-64 border-r border-slate-200 min-w-[240px]">Mata Kuliah</th>
+                    <tr class="border-b border-gold/20 text-gold font-bold">
+                        <th class="p-3 text-left w-64 border-r border-gold/10 min-w-[240px]">Mata Kuliah</th>
                         <script>
                             for(let i=1; i<=16; i++) {
-                                document.write(`<th class="p-2 border-r border-slate-200 bg-navy-50 font-bold text-navy-800">CPL ${i}</th>`);
+                                document.write(`<th class="p-2 border-r border-gold/10 bg-gold/5 font-bold text-gold">CPL ${i}</th>`);
                             }
                         </script>
-                        <th class="p-2 bg-slate-200/50 font-bold text-slate-800">SKS</th>
+                        <th class="p-2 bg-gold/10 font-bold text-gold">SKS</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-100 bg-white" id="matrixTableBody">
+                <tbody class="divide-y divide-white/5 bg-transparent text-slate-300" id="matrixTableBody">
                     <!-- JS populated -->
                 </tbody>
             </table>
@@ -670,69 +667,68 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
             <!-- Left: Pilih Mata Kuliah -->
-            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md space-y-4 h-[650px] flex flex-col justify-between">
+            <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md space-y-4 h-[650px] flex flex-col justify-between">
                 <div>
-                    <h3 class="font-bold text-slate-800 font-heading text-sm mb-3">📍 Pilih Mata Kuliah:</h3>
+                    <h3 class="font-bold text-white font-heading text-sm mb-3">📍 Pilih Mata Kuliah:</h3>
                     <input type="text" id="cpmkMkSearch" onkeyup="filterCpmkMkList()" placeholder="Cari mata kuliah..."
-                    class="w-full bg-slate-50 border border-slate-200 text-xs rounded-xl px-4 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:bg-white transition-all text-slate-700">
+                    class="w-full bg-navy-900/50 border border-white/10 text-slate-200 text-xs rounded-xl px-4 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-gold/50 focus:bg-navy-800/50 transition-all placeholder:text-white/30">
                     <div class="overflow-y-auto space-y-1 h-[420px] custom-scrollbar" id="cpmkMkList">
                         <!-- JS populated -->
                     </div>
                 </div>
-                <div class="bg-amber-50 text-amber-900 text-[10px] p-3 rounded-xl border border-amber-200 leading-relaxed font-semibold">
+                <div class="bg-gold/10 text-gold text-[10px] p-3 rounded-xl border border-gold/20 leading-relaxed font-semibold">
                     💡 CPMK adalah target terukur turunan dari CPL yang dibebankan di dalam RPS.
                 </div>
             </div>
 
             <!-- Right: Detail RPS -->
-            <div class="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-md overflow-hidden" id="cpmkDetailsArea">
-                <div class="bg-navy-50/70 p-6 border-b border-navy-200">
-                    <span class="text-xs font-bold tracking-widest text-navy-700 uppercase" id="cpmkDetailSub">RPS Detail</span>
-                    <h2 class="text-lg md:text-xl font-bold font-heading text-navy-900 mt-1" id="cpmkDetailTitle">Pilih Mata Kuliah</h2>
+            <div class="lg:col-span-2 bg-navy-800/40 rounded-2xl border border-gold/20 shadow-md overflow-hidden" id="cpmkDetailsArea">
+                <div class="bg-gold/10 p-6 border-b border-gold/20">
+                    <span class="text-xs font-bold tracking-widest text-gold uppercase" id="cpmkDetailSub">RPS Detail</span>
+                    <h2 class="text-lg md:text-xl font-bold font-heading text-gold mt-1" id="cpmkDetailTitle">Pilih Mata Kuliah</h2>
                 </div>
                 <div class="p-6 md:p-8 space-y-6">
-                    <!-- Informasi Mata Kuliah -->
                     <div id="courseInfoContainer" class="space-y-4">
-                        <!-- Diisi oleh JS dengan deskripsi dari dokumen -->
+                        <!-- Diisi oleh JS -->
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs">
-                            <span class="font-bold text-slate-800 block mb-1">CPL Terkait:</span>
-                            <p class="text-slate-600 font-medium" id="cpmkDetailCpl">-</p>
+                        <div class="bg-navy-900/50 p-4 rounded-xl border border-white/5 text-xs">
+                            <span class="font-bold text-gold block mb-1">CPL Terkait:</span>
+                            <p class="text-white/70 font-medium" id="cpmkDetailCpl">-</p>
                         </div>
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs">
-                            <span class="font-bold text-slate-800 block mb-1">Bobot SKS:</span>
-                            <p class="text-slate-600 font-medium" id="cpmkDetailSks">-</p>
+                        <div class="bg-navy-900/50 p-4 rounded-xl border border-white/5 text-xs">
+                            <span class="font-bold text-gold block mb-1">Bobot SKS:</span>
+                            <p class="text-white/70 font-medium" id="cpmkDetailSks">-</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <h4 class="font-bold text-slate-800 text-sm border-b border-slate-100 pb-2">🎯 CPMK</h4>
+                        <h4 class="font-bold text-white text-sm border-b border-gold/20 pb-2">🎯 CPMK</h4>
                         <div class="space-y-3" id="cpmkDetailCpmkList">
                             <!-- JS injected -->
                         </div>
-                        <div class="bg-blue-50 border border-blue-200 p-3 rounded-xl text-xs text-blue-800">
+                        <div class="bg-blue-400/10 border border-blue-400/20 p-3 rounded-xl text-xs text-blue-300">
                             <i class="fa-regular fa-info-circle mr-1"></i>
                             CPMK ditentukan oleh dosen pengampu mata kuliah sesuai dengan capaian pembelajaran yang ingin dicapai.
-                            <a href="https://drive.google.com/drive/folders/1dxyETq0PFpXgkZQ75Y41VYSXOw3jw5q-" target="_blank" class="text-blue-600 font-semibold hover:underline block mt-1">
+                            <a href="https://drive.google.com/drive/folders/1dxyETq0PFpXgkZQ75Y41VYSXOw3jw5q-" target="_blank" class="text-gold font-semibold hover:underline block mt-1">
                                 📁 Template RPS (Kemenristekdikti)
                             </a>
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <h4 class="font-bold text-slate-800 text-sm border-b border-slate-100 pb-2">📅 Sub-CPMK Mingguan (Contoh)</h4>
-                        <div class="overflow-x-auto rounded-lg border border-slate-200 shadow-sm">
-                            <table class="w-full text-left text-[11px] border-collapse bg-slate-50">
+                        <h4 class="font-bold text-white text-sm border-b border-gold/20 pb-2">📅 Sub-CPMK Mingguan-sampel</h4>
+                        <div class="overflow-x-auto rounded-lg border border-white/5 shadow-sm">
+                            <table class="w-full text-left text-[11px] border-collapse bg-navy-900/30">
                                 <thead>
-                                    <tr class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200">
+                                    <tr class="border-b border-gold/20 text-gold font-bold">
                                         <th class="p-3 text-center w-20">Minggu</th>
                                         <th class="p-3">Kemampuan Akhir (Sub-CPMK)</th>
                                         <th class="p-3 text-center">Evaluasi</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y divide-slate-100 bg-white" id="cpmkDetailSubCpmkTable">
+                                <tbody class="divide-y divide-white/5" id="cpmkDetailSubCpmkTable">
                                     <!-- JS populated -->
                                 </tbody>
                             </table>
@@ -748,13 +744,13 @@
     <!-- ========================================================== -->
     <div id="tab-distingsi" class="tab-content hidden space-y-6">
         <!-- Header -->
-        <div class="glass-strong rounded-3xl p-6 md:p-8 text-white border border-glow/10 shadow-2xl shadow-navy-950/50 relative overflow-hidden">
+        <div class="glass-strong rounded-3xl p-6 md:p-8 text-white border border-gold/20 shadow-2xl shadow-navy-950/50 relative overflow-hidden">
             <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none transform translate-y-8 translate-x-8">
                 <span class="text-[200px]">🧠</span>
             </div>
             <div class="relative z-10 space-y-3 max-w-4xl">
                 <span class="bg-gold/20 text-gold font-bold px-3 py-1 rounded-full text-[10px] tracking-wider uppercase border border-gold/30">KEKHASAN PROGRAM STUDI</span>
-                <h2 class="text-xl md:text-3xl font-bold font-heading leading-tight text-glow glow-text">Distingsi & Laboratorium Riset</h2>
+                <h2 class="text-xl md:text-3xl font-bold font-heading leading-tight text-gold glow-text">Distingsi & Laboratorium Riset</h2>
                 <p class="text-xs md:text-sm text-white/60 font-medium max-w-2xl leading-relaxed">
                     Program Studi Psikologi Islam memiliki kekhasan dalam integrasi keilmuan psikologi dengan nilai-nilai keislaman, serta didukung oleh laboratorium riset digital Psychosophia Behavioral Lab.
                 </p>
@@ -763,161 +759,161 @@
 
         <!-- Kelompok Mata Kuliah Integrasi Keislaman -->
         <div class="space-y-4">
-            <h3 class="text-lg font-bold text-slate-800 font-heading flex items-center gap-2">
+            <h3 class="text-lg font-bold text-white font-heading flex items-center gap-2">
                 <span class="text-2xl">🕌</span> Kelompok Mata Kuliah Integrasi Keislaman
             </h3>
-            <p class="text-xs text-slate-500 leading-relaxed">
+            <p class="text-xs text-white/50 leading-relaxed">
                 Mata kuliah berikut merupakan ciri khas Program Studi Psikologi Islam yang mengintegrasikan psikologi modern dengan nilai-nilai, ajaran, dan epistemologi Islam.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Psikologi Islam -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md card-cluster integration">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">📖</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Psikologi Islam</h4>
-                            <span class="text-[10px] text-amber-600 font-semibold">3 SKS · Semester 4</span>
+                            <h4 class="font-bold text-white">Psikologi Islam</h4>
+                            <span class="text-[10px] text-gold font-semibold">3 SKS · Semester 4</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Paradigma integrasi keilmuan psikologi dengan nilai-nilai spiritual dan kajian keislaman moderat, termasuk epistemologi nafsani dan tazkiyatun nafs.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Paradigma integrasi keilmuan psikologi dengan nilai-nilai spiritual dan kajian keislaman moderat, termasuk epistemologi nafsani dan tazkiyatun nafs.</p>
                     <div class="mt-2 flex gap-2">
                         <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
-                    </div>Profil target lulusan berkarakter Islami
+                    </div>
                 </div>
 
                 <!-- Kajian Psikologis Fiqh -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md card-cluster integration">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">📜</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Kajian Psikologis Fiqh</h4>
-                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 6</span>
+                            <h4 class="font-bold text-white">Kajian Psikologis Fiqh</h4>
+                            <span class="text-[10px] text-gold font-semibold">2 SKS · Semester 6</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Mengkaji dimensi psikologis dalam hukum Islam (fiqh), termasuk aspek mental, emosi, dan perilaku dalam konteks ibadah, muamalah, dan akhlak.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Mengkaji dimensi psikologis dalam hukum Islam (fiqh), termasuk aspek mental, emosi, dan perilaku dalam konteks ibadah, muamalah, dan akhlak.</p>
                     <div class="mt-2 flex gap-2">
                         <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
                     </div>
                 </div>
 
                 <!-- Psikologi Ulayat -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md card-cluster integration">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">🏛️</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Psikologi Ulayat</h4>
-                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 4</span>
+                            <h4 class="font-bold text-white">Psikologi Ulayat</h4>
+                            <span class="text-[10px] text-gold font-semibold">2 SKS · Semester 4</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Pemahaman psikologis tentang konsep tanah ulayat, kearifan lokal, dan hubungan manusia dengan alam dalam perspektif masyarakat adat dan budaya lokal.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Pemahaman psikologis tentang konsep tanah ulayat, kearifan lokal, dan hubungan manusia dengan alam dalam perspektif masyarakat adat dan budaya lokal.</p>
                     <div class="mt-2 flex gap-2">
                         <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 5, 6, 9</span>
                     </div>
                 </div>
 
                 <!-- Dasar Pemikiran Psikologi Islam -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md card-cluster integration">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">🧠</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Dasar Pemikiran Psikologi Islam</h4>
-                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 2</span>
+                            <h4 class="font-bold text-white">Dasar Pemikiran Psikologi Islam</h4>
+                            <span class="text-[10px] text-gold font-semibold">2 SKS · Semester 2</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Pengantar epistemologi dan sejarah pemikiran psikologi Islam klasik, termasuk kajian tentang nafs, ruh, qalb, dan konsep-konsep psikospiritual dalam Islam.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Pengantar epistemologi dan sejarah pemikiran psikologi Islam klasik, termasuk kajian tentang nafs, ruh, qalb, dan konsep-konsep psikospiritual dalam Islam.</p>
                     <div class="mt-2 flex gap-2">
                         <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
                     </div>
                 </div>
 
                 <!-- Kajian Psikologis Qur'ani -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md card-cluster integration">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">🔮</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Kajian Psikologis Qur'ani</h4>
-                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 5</span>
+                            <h4 class="font-bold text-white">Kajian Psikologis Qur'ani</h4>
+                            <span class="text-[10px] text-gold font-semibold">2 SKS · Semester 5</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Analisis tematik ayat-ayat Al-Qur'an yang berkaitan dengan jiwa, perilaku, kesehatan mental, dan proses psikologis manusia.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Analisis tematik ayat-ayat Al-Qur'an yang berkaitan dengan jiwa, perilaku, kesehatan mental, dan proses psikologis manusia.</p>
                     <div class="mt-2 flex gap-2">
                         <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
                     </div>
                 </div>
 
                 <!-- Psikologi Tasawuf -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md card-cluster integration">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">☪️</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Psikologi Tasawuf</h4>
-                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 6</span>
+                            <h4 class="font-bold text-white">Psikologi Tasawuf</h4>
+                            <span class="text-[10px] text-gold font-semibold">2 SKS · Semester 6</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Mengkaji dimensi psikologis dalam tasawuf, termasuk konsep maqam, hal, tazkiyatun nafs, dan implikasinya terhadap kesehatan mental dan pengembangan diri.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Mengkaji dimensi psikologis dalam tasawuf, termasuk konsep maqam, hal, tazkiyatun nafs, dan implikasinya terhadap kesehatan mental dan pengembangan diri.</p>
                     <div class="mt-2 flex gap-2">
                         <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 7, 9, 10</span>
                     </div>
                 </div>
 
                 <!-- Psikologi Pesantren -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md card-cluster integration">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">🕌</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Psikologi Pesantren</h4>
-                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 4</span>
+                            <h4 class="font-bold text-white">Psikologi Pesantren</h4>
+                            <span class="text-[10px] text-gold font-semibold">2 SKS · Semester 4</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Studi psikologis tentang kehidupan pesantren, dinamika santri, pola pengasuhan, dan pendidikan karakter dalam lingkungan pondok pesantren.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Studi psikologis tentang kehidupan pesantren, dinamika santri, pola pengasuhan, dan pendidikan karakter dalam lingkungan pondok pesantren.</p>
                     <div class="mt-2 flex gap-2">
                         <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 1, 5, 7, 9</span>
                     </div>
                 </div>
 
                 <!-- Psikologi Agama -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster integration">
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md card-cluster integration">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">🕊️</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Psikologi Agama</h4>
-                            <span class="text-[10px] text-amber-600 font-semibold">2 SKS · Semester 3</span>
+                            <h4 class="font-bold text-white">Psikologi Agama</h4>
+                            <span class="text-[10px] text-gold font-semibold">2 SKS · Semester 3</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Mempelajari hubungan antara agama, spiritualitas, dan perilaku manusia, termasuk dimensi psikologis dari pengalaman religius dan keberagamaan.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Mempelajari hubungan antara agama, spiritualitas, dan perilaku manusia, termasuk dimensi psikologis dari pengalaman religius dan keberagamaan.</p>
                     <div class="mt-2 flex gap-2">
                         <span class="text-[8px] bg-gold/10 text-gold px-2 py-0.5 rounded-full border border-gold/20">CPL 5, 6, 9</span>
                     </div>
                 </div>
 
-                <!-- Wawasan Ilmu Perilaku (Behavioral Science) -->
-                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-md card-cluster behavioral">
+                <!-- Wawasan Ilmu Perilaku -->
+                <div class="bg-navy-800/40 p-5 rounded-2xl border border-cyan-400/20 shadow-md card-cluster behavioral">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-2xl">⚡</span>
                         <div>
-                            <h4 class="font-bold text-slate-800">Wawasan Ilmu Perilaku</h4>
-                            <span class="text-[10px] text-sage-600 font-semibold">2 SKS · Semester 6</span>
+                            <h4 class="font-bold text-white">Wawasan Ilmu Perilaku</h4>
+                            <span class="text-[10px] text-cyan-400 font-semibold">2 SKS · Semester 6</span>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-500 leading-relaxed">Pengantar ilmu perilaku (behavioral science) yang mengintegrasikan psikologi kognitif dan sosial dengan pengambilan keputusan dalam berbagai konteks kehidupan.</p>
+                    <p class="text-xs text-white/60 leading-relaxed">Pengantar ilmu perilaku (behavioral science) yang mengintegrasikan psikologi kognitif dan sosial dengan pengambilan keputusan dalam berbagai konteks kehidupan.</p>
                     <div class="mt-2 flex gap-2">
-                        <span class="text-[8px] bg-sage/10 text-sage px-2 py-0.5 rounded-full border border-sage/20">CPL 6, 9, 16</span>
+                        <span class="text-[8px] bg-cyan-400/10 text-cyan-400 px-2 py-0.5 rounded-full border border-cyan-400/20">CPL 6, 9, 16</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Psychosophia Behavioral Lab -->
-        <div class="bg-gradient-to-br from-navy-900 to-navy-800 rounded-3xl p-6 md:p-8 border border-glow/10 shadow-xl relative overflow-hidden">
+        <div class="bg-gradient-to-br from-navy-900 to-navy-800 rounded-3xl p-6 md:p-8 border border-gold/20 shadow-xl relative overflow-hidden">
             <div class="absolute -right-20 -bottom-20 text-8xl opacity-5"><i class="fa-regular fa-microchip"></i></div>
             <div class="relative z-10">
                 <div class="flex items-center gap-4 mb-4">
-                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-glow-400 to-navy-600 flex items-center justify-center text-2xl shadow-lg shadow-glow/20">
-                        <i class="fa-regular fa-microscope text-white"></i>
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold to-amber-600 flex items-center justify-center text-2xl shadow-lg shadow-gold/20">
+                        <i class="fa-regular fa-microscope text-navy-950"></i>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold font-heading text-glow glow-text">Psychosophia Behavioral Lab</h3>
+                        <h3 class="text-xl font-bold font-heading text-gold glow-text">Psychosophia Behavioral Lab</h3>
                         <p class="text-xs text-white/50">Laboratorium Riset Digital · Program Studi Psikologi Islam</p>
                     </div>
                 </div>
@@ -925,40 +921,40 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="space-y-3">
                         <p class="text-sm text-white/70 leading-relaxed">
-                            <strong class="text-glow">Psychosophia Behavioral Lab</strong> adalah laboratorium riset digital terintegrasi yang berfokus pada pengembangan intervensi perilaku berbasis data dan kajian psikologi kontemporer dengan pendekatan multidisiplin.
+                            <strong class="text-gold">Psychosophia Behavioral Lab</strong> adalah laboratorium riset digital terintegrasi yang berfokus pada pengembangan intervensi perilaku berbasis data dan kajian psikologi kontemporer dengan pendekatan multidisiplin.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-brain mr-1"></i> Riset Perilaku</span>
-                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-chart-line mr-1"></i> Analisis Data</span>
-                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-microchip mr-1"></i> Lab Digital</span>
-                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-glow border border-glow/10"><i class="fa-regular fa-book-open mr-1"></i> Kajian Islam</span>
+                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-gold border border-gold/20"><i class="fa-regular fa-brain mr-1"></i> Riset Perilaku</span>
+                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-gold border border-gold/20"><i class="fa-regular fa-chart-line mr-1"></i> Analisis Data</span>
+                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-gold border border-gold/20"><i class="fa-regular fa-microchip mr-1"></i> Lab Digital</span>
+                            <span class="bg-navy-700/50 px-3 py-1 rounded-full text-[9px] text-gold border border-gold/20"><i class="fa-regular fa-book-open mr-1"></i> Kajian Islam</span>
                         </div>
                     </div>
 
-                    <div class="bg-navy-900/50 rounded-2xl p-5 border border-glow/10 space-y-3">
+                    <div class="bg-navy-900/50 rounded-2xl p-5 border border-gold/20 space-y-3">
                         <h4 class="font-bold text-sm text-gold">🔄 Bidang Riset Unggulan</h4>
                         <ul class="space-y-2 text-xs text-white/60 leading-relaxed">
                             <li class="flex items-start gap-2">
-                                <span class="text-glow mt-0.5">▸</span>
+                                <span class="text-gold mt-0.5">▸</span>
                                 <span><strong class="text-white/80">Integritas Akademik & Moral Disengagement</strong> — Studi tentang pelepasan moral dalam konteks akademik digital</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <span class="text-glow mt-0.5">▸</span>
+                                <span class="text-gold mt-0.5">▸</span>
                                 <span><strong class="text-white/80">Psikologi Perilaku Ekonomi Islam</strong> — Riset tentang pengambilan keputusan ekonomi berbasis nilai-nilai Islam</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <span class="text-glow mt-0.5">▸</span>
+                                <span class="text-gold mt-0.5">▸</span>
                                 <span><strong class="text-white/80">Intervensi Psikososial Digital</strong> — Pengembangan alat ukur dan intervensi berbasis teknologi</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <span class="text-glow mt-0.5">▸</span>
+                                <span class="text-gold mt-0.5">▸</span>
                                 <span><strong class="text-white/80">Integrasi Sains & Spiritualitas</strong> — Kajian epistemologi psikologi Islam dan pengembangan model intervensi</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="mt-4 pt-4 border-t border-glow/10 flex flex-wrap justify-between items-center gap-3">
+                <div class="mt-4 pt-4 border-t border-gold/20 flex flex-wrap justify-between items-center gap-3">
                     <span class="text-[9px] text-white/30 font-mono">Psychosophia Behavioral Lab v2.0 · IAIN SAS Babel</span>
                     <span class="text-[9px] text-gold/50 flex items-center gap-1">
                         <i class="fa-regular fa-circle-check"></i> Terintegrasi dengan Kurikulum OBE
@@ -968,12 +964,12 @@
         </div>
 
         <!-- Call to Action -->
-        <div class="bg-gradient-to-r from-amber-50/50 to-amber-100/30 border border-amber-200/50 rounded-2xl p-5 flex items-center justify-between flex-wrap gap-4">
+        <div class="bg-gradient-to-r from-gold/10 to-gold/5 border border-gold/20 rounded-2xl p-5 flex items-center justify-between flex-wrap gap-4">
             <div class="flex items-center gap-3">
                 <span class="text-2xl">📋</span>
                 <div>
-                    <p class="text-sm font-bold text-amber-900">Eksplorasi Kurikulum Lebih Lanjut</p>
-                    <p class="text-xs text-amber-700/70">Gunakan menu navigasi untuk melihat matriks CPL, CPMK, dan detail RPS</p>
+                    <p class="text-sm font-bold text-gold">Eksplorasi Kurikulum Lebih Lanjut</p>
+                    <p class="text-xs text-white/50">Gunakan menu navigasi untuk melihat matriks CPL, CPMK, dan detail RPS</p>
                 </div>
             </div>
             <button onclick="switchTab('matakuliah')" class="btn-primary-gold text-navy-950 font-bold text-xs px-5 py-2.5 rounded-xl flex items-center gap-2">
@@ -988,7 +984,7 @@
 
 <!-- ====== TOAST NOTIFICATION ====== -->
 <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-10 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="bg-navy-900 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-lg border border-glow/20 flex items-center gap-2 backdrop-blur-sm">
+    <div class="bg-navy-900 text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-lg border border-gold/20 flex items-center gap-2 backdrop-blur-sm">
         <span id="toastIcon">💡</span>
         <span id="toastMessage">Sistem siap.</span>
     </div>
@@ -1353,23 +1349,23 @@
         const grid = document.getElementById('cplGrid');
         grid.innerHTML = '';
         data.forEach(item => {
-            let badgeColor = "bg-emerald-100 text-emerald-800 border-emerald-200";
-            if (item.domain === "Pengetahuan") badgeColor = "bg-blue-100 text-blue-800 border-blue-200";
-            if (item.domain === "Keterampilan Khusus") badgeColor = "bg-amber-100 text-amber-800 border-amber-200";
-            if (item.domain === "Keterampilan Umum") badgeColor = "bg-purple-100 text-purple-800 border-purple-200";
+            let badgeClass = "bg-emerald-400/10 text-emerald-300 border-emerald-400/20";
+            if (item.domain === "Pengetahuan") badgeClass = "bg-blue-400/10 text-blue-300 border-blue-400/20";
+            if (item.domain === "Keterampilan Khusus") badgeClass = "bg-amber-400/10 text-amber-300 border-amber-400/20";
+            if (item.domain === "Keterampilan Umum") badgeClass = "bg-purple-400/10 text-purple-300 border-purple-400/20";
 
             const card = document.createElement('div');
             card.className =
-                "bg-white p-5 rounded-2xl border border-slate-200 shadow-md flex flex-col justify-between space-y-3 hover:shadow-lg hover:border-slate-300 transition-all relative overflow-hidden";
+                "bg-navy-800/40 p-5 rounded-2xl border border-gold/20 shadow-md flex flex-col justify-between space-y-3 hover:shadow-lg hover:border-gold/40 transition-all relative overflow-hidden";
             card.innerHTML = `
                     <div class="flex items-center justify-between">
-                        <span class="text-xs font-black font-heading tracking-wide ${badgeColor} border px-3 py-1 rounded-full font-mono shadow-sm">${item.kode}</span>
-                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider font-mono">${item.level}</span>
+                        <span class="text-xs font-black font-heading tracking-wide ${badgeClass} border px-3 py-1 rounded-full font-mono shadow-sm">${item.kode}</span>
+                        <span class="text-[10px] text-white/40 font-bold uppercase tracking-wider font-mono">${item.level}</span>
                     </div>
-                    <p class="text-xs text-slate-700 leading-relaxed font-semibold">${item.deskripsi}</p>
-                    <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400 font-bold uppercase">
+                    <p class="text-xs text-white/70 leading-relaxed font-semibold">${item.deskripsi}</p>
+                    <div class="pt-2.5 border-t border-white/5 flex items-center justify-between text-[10px] text-white/40 font-bold uppercase">
                         <span>${item.domain}</span>
-                        <span class="text-emerald-600 font-extrabold">Terpetakan ✔️</span>
+                        <span class="text-gold font-extrabold">Terpetakan ✔️</span>
                     </div>
                 `;
             grid.appendChild(card);
@@ -1380,11 +1376,12 @@
     function filterCPL(domain) {
         const buttons = document.querySelectorAll('.cpl-filter-btn');
         buttons.forEach(btn => {
-            btn.className =
-            "cpl-filter-btn px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold shrink-0 transition-all";
+            btn.className = "cpl-filter-btn px-4 py-2 bg-navy-700/50 text-white/60 hover:bg-navy-600/50 rounded-xl text-xs font-semibold shrink-0 border border-white/5 transition-all";
         });
-        event.target.className =
-            "cpl-filter-btn px-4 py-2 bg-navy-700 text-white rounded-xl text-xs font-semibold shadow-sm shrink-0 transition-all";
+        if (event && event.target) {
+            event.target.className =
+                "cpl-filter-btn px-4 py-2 bg-gold/20 text-gold rounded-xl text-xs font-semibold shadow-sm shrink-0 border border-gold/30 transition-all";
+        }
 
         if (domain === 'all') {
             populateCPLGrid(cplDataset);
@@ -1399,27 +1396,27 @@
         const container = document.getElementById('bkContainer');
         container.innerHTML = '';
         bkDataset.forEach((bk, index) => {
-            let badgeClass = "bg-emerald-50 border-emerald-200 text-emerald-800";
-            if (index % 4 === 1) badgeClass = "bg-blue-50 border-blue-200 text-blue-800";
-            if (index % 4 === 2) badgeClass = "bg-amber-50 border-amber-200 text-amber-800";
-            if (index % 4 === 3) badgeClass = "bg-purple-50 border-purple-200 text-purple-800";
+            let borderClass = "border-gold/20";
+            if (index % 4 === 1) borderClass = "border-blue-400/20";
+            if (index % 4 === 2) borderClass = "border-amber-400/20";
+            if (index % 4 === 3) borderClass = "border-purple-400/20";
 
             const card = document.createElement('div');
             card.className =
-                "bg-slate-50/50 p-5 rounded-2xl border border-slate-200 hover:bg-white hover:shadow-lg transition-all space-y-3";
+                `bg-navy-800/30 p-5 rounded-2xl border ${borderClass} hover:bg-navy-700/30 hover:shadow-lg transition-all space-y-3`;
             let cplTags = bk.cpls.map(c =>
-                `<span class="bg-slate-200/60 text-slate-700 font-semibold font-mono text-[9px] px-1.5 py-0.5 rounded shadow-sm">${c}</span>`
+                `<span class="bg-gold/10 text-gold font-semibold font-mono text-[9px] px-1.5 py-0.5 rounded shadow-sm border border-gold/20">${c}</span>`
                 ).join(' ');
             card.innerHTML = `
-                    <div class="flex items-center justify-between border-b border-slate-200/55 pb-2">
-                        <span class="font-extrabold text-xs font-heading ${badgeClass} border px-3 py-1 rounded-xl shadow-sm font-mono">${bk.kode}</span>
+                    <div class="flex items-center justify-between border-b border-white/5 pb-2">
+                        <span class="font-extrabold text-xs font-heading text-gold px-3 py-1 rounded-xl shadow-sm font-mono">${bk.kode}</span>
                         <div class="flex gap-1">${cplTags}</div>
                     </div>
-                    <h4 class="font-bold text-slate-800 text-xs font-heading">${bk.nama}</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">${bk.deskripsi}</p>
-                    <div class="pt-2 text-[9px] text-slate-400 font-bold uppercase flex items-center justify-between">
+                    <h4 class="font-bold text-white text-xs font-heading">${bk.nama}</h4>
+                    <p class="text-[11px] text-white/50 leading-relaxed">${bk.deskripsi}</p>
+                    <div class="pt-2 text-[9px] text-white/30 font-bold uppercase flex items-center justify-between">
                         <span>Kurikulum PI 2024</span>
-                        <span class="text-emerald-700">Korelasi ✔️</span>
+                        <span class="text-gold/70">Korelasi ✔️</span>
                     </div>
                 `;
             container.appendChild(card);
@@ -1438,17 +1435,17 @@
         for (let i = 1; i <= 8; i += 2) {
             const s1 = semSksMap[i] || 0;
             const s2 = semSksMap[i + 1] || 0;
-            const maxClassS1 = s1 > 24 ? "text-rose-600 font-extrabold underline" : "text-emerald-700 font-extrabold";
-            const maxClassS2 = s2 > 24 ? "text-rose-600 font-extrabold underline" : "text-emerald-700 font-extrabold";
+            const maxClassS1 = s1 > 24 ? "text-rose-400 font-extrabold underline" : "text-emerald-400 font-extrabold";
+            const maxClassS2 = s2 > 24 ? "text-rose-400 font-extrabold underline" : "text-emerald-400 font-extrabold";
             const div = document.createElement('div');
             div.className =
-                "col-span-2 bg-white p-3.5 rounded-xl border border-slate-200 flex justify-between items-center shadow-sm";
+                "col-span-2 bg-navy-800/30 p-3.5 rounded-xl border border-gold/20 flex justify-between items-center shadow-sm";
             div.innerHTML = `
                     <div class="w-full">
-                        <span class="text-[9px] text-slate-400 font-bold block uppercase tracking-wider">Beban Belajar</span>
+                        <span class="text-[9px] text-white/40 font-bold block uppercase tracking-wider">Beban Belajar</span>
                         <div class="flex items-center justify-between mt-1.5 w-full">
-                            <span class="text-xs text-slate-700 font-semibold">Sem ${i}: <strong class="${maxClassS1} text-sm font-mono">${s1} SKS</strong></span>
-                            <span class="text-xs text-slate-700 font-semibold">Sem ${i+1}: <strong class="${maxClassS2} text-sm font-mono">${s2} SKS</strong></span>
+                            <span class="text-xs text-white/70 font-semibold">Sem ${i}: <strong class="${maxClassS1} text-sm font-mono">${s1} SKS</strong></span>
+                            <span class="text-xs text-white/70 font-semibold">Sem ${i+1}: <strong class="${maxClassS2} text-sm font-mono">${s2} SKS</strong></span>
                         </div>
                     </div>
                 `;
@@ -1472,41 +1469,38 @@
         tbody.innerHTML = '';
         if (data.length === 0) {
             tbody.innerHTML =
-                `<tr><td colspan="7" class="p-8 text-center text-slate-400 italic bg-white">Mata kuliah tidak ditemukan.</td></tr>`;
+                `<tr><td colspan="7" class="p-8 text-center text-white/40 italic">Mata kuliah tidak ditemukan.</td></tr>`;
             return;
         }
         data.forEach(row => {
             const tr = document.createElement('tr');
-            tr.className = "hover:bg-slate-50 transition-colors border-b border-slate-100";
+            tr.className = "hover:bg-white/5 transition-colors border-b border-white/5";
             let statusCheckbox = "";
-            let rowBg = "bg-white";
             if (row.jenis === "Wajib") {
                 statusCheckbox = `
                         <div class="flex items-center justify-center">
-                            <input type="checkbox" checked disabled class="w-4.5 h-4.5 text-emerald-600 bg-emerald-100 border-emerald-300 rounded focus:ring-emerald-500 opacity-60 cursor-not-allowed">
+                            <input type="checkbox" checked disabled class="w-4 h-4 text-gold/50 bg-navy-700/50 border-gold/30 rounded focus:ring-gold/50 opacity-60 cursor-not-allowed">
                         </div>
                     `;
             } else {
                 const isSelected = selectedCourses[row.id];
-                rowBg = isSelected ? "bg-amber-50/40" : "bg-slate-50/40";
                 statusCheckbox = `
                         <div class="flex items-center justify-center">
-                            <input type="checkbox" ${isSelected ? 'checked' : ''} onclick="toggleCourseSelection(${row.id})" class="w-4.5 h-4.5 text-amber-600 bg-amber-50 border-amber-300 rounded focus:ring-amber-500 cursor-pointer shadow">
+                            <input type="checkbox" ${isSelected ? 'checked' : ''} onclick="toggleCourseSelection(${row.id})" class="w-4 h-4 text-gold bg-navy-700 border-gold/30 rounded focus:ring-gold/50 cursor-pointer shadow">
                         </div>
                     `;
             }
             let cplBadges = row.cpls.map(c =>
-                `<span class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded-md font-mono text-[9px] font-bold mr-1 inline-block shadow-sm">${c}</span>`
+                `<span class="bg-gold/10 text-gold border border-gold/20 px-2 py-0.5 rounded-md font-mono text-[9px] font-bold mr-1 inline-block shadow-sm">${c}</span>`
                 ).join('');
-            tr.className = `${rowBg} hover:bg-slate-50 transition-colors border-b border-slate-100`;
             tr.innerHTML = `
-                    <td class="p-3 text-center border-r border-slate-100">${statusCheckbox}</td>
-                    <td class="p-3 font-bold text-slate-800 hover:text-navy-700 cursor-pointer transition-colors" onclick="loadCpmkToView('${row.nama}')">📖 ${row.nama}</td>
-                    <td class="p-3 text-center font-bold text-slate-600 font-mono">${row.semester}</td>
-                    <td class="p-3 text-center font-extrabold text-slate-800 font-mono text-sm">${row.sks} SKS</td>
-                    <td class="p-3 text-center"><span class="bg-slate-100 text-slate-700 border border-slate-200 px-2.5 py-0.5 rounded-full text-[10px] font-bold">${row.jenis}</span></td>
+                    <td class="p-3 text-center border-r border-white/5">${statusCheckbox}</td>
+                    <td class="p-3 font-bold text-white hover:text-gold cursor-pointer transition-colors" onclick="loadCpmkToView('${row.nama}')">📖 ${row.nama}</td>
+                    <td class="p-3 text-center font-bold text-white/60 font-mono">${row.semester}</td>
+                    <td class="p-3 text-center font-extrabold text-gold font-mono text-sm">${row.sks} SKS</td>
+                    <td class="p-3 text-center"><span class="bg-white/10 text-white/70 border border-white/10 px-2.5 py-0.5 rounded-full text-[10px] font-bold">${row.jenis}</span></td>
                     <td class="p-3">${cplBadges}</td>
-                    <td class="p-3 text-center font-black text-emerald-700 bg-emerald-50/40 text-xs">${row.cpls.length} CPL</td>
+                    <td class="p-3 text-center font-black text-gold bg-gold/5 text-xs">${row.cpls.length} CPL</td>
                 `;
             tbody.appendChild(tr);
         });
@@ -1535,19 +1529,19 @@
         mkDataset.forEach(row => {
             if (!selectedCourses[row.id]) return;
             const tr = document.createElement('tr');
-            tr.className = "hover:bg-amber-100/40 border-b border-slate-150 transition-colors";
+            tr.className = "hover:bg-gold/5 border-b border-white/5 transition-colors";
             let cellsHtml =
-                `<td class="p-3 text-left font-bold text-slate-800 border-r border-slate-200 cursor-pointer hover:text-navy-700 max-w-[220px]" onclick="loadCpmkToView('${row.nama}')">📖 ${row.nama}</td>`;
+                `<td class="p-3 text-left font-bold text-white border-r border-gold/10 cursor-pointer hover:text-gold max-w-[220px]" onclick="loadCpmkToView('${row.nama}')">📖 ${row.nama}</td>`;
             for (let i = 1; i <= 16; i++) {
                 const cplKey = `CPL ${i}`;
                 const hasCpl = row.cpls.includes(cplKey);
                 const indicator = hasCpl ?
-                    `<span class="bg-navy-600 text-white font-extrabold w-4 h-4 rounded-full flex items-center justify-center mx-auto text-[8px] shadow-sm transform scale-110 matrix-cell">●</span>` :
-                    `<span class="text-slate-300 font-light">-</span>`;
+                    `<span class="bg-gold text-navy-950 font-extrabold w-4 h-4 rounded-full flex items-center justify-center mx-auto text-[8px] shadow-sm transform scale-110 matrix-cell">●</span>` :
+                    `<span class="text-white/20 font-light">-</span>`;
                 cellsHtml +=
-                    `<td class="p-2 border-r border-slate-150 text-center ${hasCpl ? 'bg-navy-50/20' : ''}">${indicator}</td>`;
+                    `<td class="p-2 border-r border-gold/10 text-center ${hasCpl ? 'bg-gold/5' : ''}">${indicator}</td>`;
             }
-            cellsHtml += `<td class="p-2 font-bold text-slate-800 bg-amber-50 font-mono text-xs">${row.sks}</td>`;
+            cellsHtml += `<td class="p-2 font-bold text-gold bg-gold/5 font-mono text-xs">${row.sks}</td>`;
             tr.innerHTML = cellsHtml;
             tbody.appendChild(tr);
         });
@@ -1563,11 +1557,11 @@
 
         const infoContainer = document.getElementById('courseInfoContainer');
         infoContainer.innerHTML = `
-                <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
-                    <h4 class="font-bold text-emerald-900 text-sm flex items-center gap-2">
+                <div class="bg-gold/5 border border-gold/20 p-4 rounded-xl">
+                    <h4 class="font-bold text-gold text-sm flex items-center gap-2">
                         <i class="fa-regular fa-file-lines"></i> Deskripsi Mata Kuliah
                     </h4>
-                    <p class="text-sm text-slate-700 mt-1 leading-relaxed">${rpsData.description}</p>
+                    <p class="text-sm text-white/70 mt-1 leading-relaxed">${rpsData.description}</p>
                 </div>
             `;
 
@@ -1576,8 +1570,8 @@
         rpsData.cpmks.forEach(c => {
             const div = document.createElement('div');
             div.className =
-                "flex gap-3 bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-700 leading-relaxed font-semibold";
-            div.innerHTML = `<span class="text-navy-600 font-bold text-sm">🎯</span> <span>${c}</span>`;
+                "flex gap-3 bg-navy-900/50 p-3.5 rounded-xl border border-white/5 text-xs text-white/70 leading-relaxed font-semibold";
+            div.innerHTML = `<span class="text-gold font-bold text-sm">🎯</span> <span>${c}</span>`;
             cpmkContainer.appendChild(div);
         });
 
@@ -1585,11 +1579,11 @@
         weekTable.innerHTML = '';
         rpsData.weeks.forEach(w => {
             const tr = document.createElement('tr');
-            tr.className = "hover:bg-slate-50 border-b border-slate-100";
+            tr.className = "hover:bg-white/5 border-b border-white/5";
             tr.innerHTML = `
-                    <td class="p-3 text-center font-bold text-slate-600 font-mono bg-slate-50/50">${w.week}</td>
-                    <td class="p-3 text-slate-700 font-semibold">${w.sub}</td>
-                    <td class="p-3 text-center"><span class="bg-navy-50 text-navy-800 font-bold px-2 py-0.5 rounded text-[10px] border border-navy-200/50 shadow-sm">${w.eval}</span></td>
+                    <td class="p-3 text-center font-bold text-gold font-mono bg-navy-800/20">${w.week}</td>
+                    <td class="p-3 text-white/70 font-semibold">${w.sub}</td>
+                    <td class="p-3 text-center"><span class="bg-gold/10 text-gold font-bold px-2 py-0.5 rounded text-[10px] border border-gold/20 shadow-sm">${w.eval}</span></td>
                 `;
             weekTable.appendChild(tr);
         });
@@ -1599,10 +1593,10 @@
         cpmkButtons.forEach(btn => {
             if (btn.dataset.mkname === mkName) {
                 btn.className =
-                    "cpmk-mk-btn w-full text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-navy-700 text-white shadow-md transition-all";
+                    "cpmk-mk-btn w-full text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-gold/20 text-gold border border-gold/30 shadow-md transition-all";
             } else {
                 btn.className =
-                    "cpmk-mk-btn w-full text-left text-xs font-semibold px-3 py-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 transition-all";
+                    "cpmk-mk-btn w-full text-left text-xs font-semibold px-3 py-2.5 rounded-lg bg-navy-700/30 hover:bg-navy-600/30 text-white/70 transition-all";
             }
         });
     }
@@ -1614,10 +1608,10 @@
         mkDataset.forEach(mk => {
             const btn = document.createElement('button');
             btn.className =
-                "cpmk-mk-btn w-full text-left text-xs font-semibold px-3 py-2.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 transition-all flex items-center justify-between";
+                "cpmk-mk-btn w-full text-left text-xs font-semibold px-3 py-2.5 rounded-lg bg-navy-700/30 hover:bg-navy-600/30 text-white/70 transition-all flex items-center justify-between";
             btn.dataset.mkname = mk.nama;
             btn.innerHTML =
-                `<span>📖 ${mk.nama}</span> <span class="text-[9px] bg-slate-200/60 text-slate-600 px-1.5 py-0.5 rounded-md font-bold font-mono shadow-sm">${mk.sks} SKS</span>`;
+                `<span>📖 ${mk.nama}</span> <span class="text-[9px] bg-white/5 text-white/40 px-1.5 py-0.5 rounded-md font-bold font-mono shadow-sm">${mk.sks} SKS</span>`;
             btn.onclick = () => loadCpmkToView(mk.nama);
             container.appendChild(btn);
         });
@@ -1642,7 +1636,7 @@
         const activeBtn = document.getElementById(`btn-${tabId}`);
         if (activeBtn) {
             activeBtn.className =
-                "nav-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 bg-glow/20 text-white shadow-lg shadow-glow/10 border border-glow/20";
+                "nav-btn active w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 text-gold bg-gold/10 border border-gold/30";
         }
 
         const titleMap = {
